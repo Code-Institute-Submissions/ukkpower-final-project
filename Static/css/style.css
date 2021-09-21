@@ -19,3 +19,56 @@ body {
       padding-top: 5rem;
       padding-bottom: 5rem;
   }
+
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+header {
+    padding: 0 15px;
+  }
+  
+  .shop-nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+  }
+  
+  .icon {
+      color: #0f0f0f;
+      font-size: 24px;
+      transition: all .3s ease-out;
+      -webkit-transition: all .3s ease-out;
+      -moz-transition: all .3s ease-out;
+      -ms-transition: all .3s ease-out;
+      -o-transition: all .3s ease-out;
+    }
+  
+    .shop-cart {
+      display: inline-block;
+      margin-right: 26px;
+      position: relative;
+  }
+  
+    .shop-button {
+      display: inline-block;
+      position: relative;
+  }
+  
+    .shop-count {
+      background-color: #ec6b81;
+      display: inline-block;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      line-height: 20px;
+      left: 17px;
+      top: calc(100% - 16px);
+      border-radius: 50%;
+  }
