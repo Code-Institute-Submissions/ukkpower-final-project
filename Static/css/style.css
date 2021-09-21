@@ -72,3 +72,26 @@ header {
       top: calc(100% - 16px);
       border-radius: 50%;
   }
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+
+.footer-address li {
+  margin-bottom: 24px;
+  position: relative;
+  padding-left: 30px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.footer-address li i {
+  position: absolute;
+  left: 0px;
+  top: 5px;
+  font-size: 18px;
+}
+
+.footer-opening-times li span:last-child {
+  float: right;
+}
