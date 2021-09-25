@@ -32,6 +32,11 @@ header {
   padding: 0 15px;
 }
 
+.navbar-brand img {
+  margin-right: 10px;
+  height: 28px;
+}
+
 .shop-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -105,6 +110,7 @@ header {
   position: relative;
   -webkit-text-stroke: 1px #fff;
   -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  text-transform: uppercase;
 }
 
 .breadcrumb {
@@ -191,6 +197,9 @@ header {
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
+.footer-top {
+  padding: 60px 0px 0px 0px;
+}
 
 .footer-address li {
   margin-bottom: 24px;
