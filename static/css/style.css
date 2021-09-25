@@ -20,7 +20,6 @@ a {
 aside,
 section {
   padding-top: 5rem;
-  padding-bottom: 5rem;
 }
 
 h1,
@@ -31,6 +30,12 @@ h5,
 h6 {
   font-family: 'Teko', sans-serif;
   font-weight: 800;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 3px;
 }
 
 table {
@@ -60,7 +65,6 @@ table tbody td {
   padding: 15px!important;
   text-align: center;
 }
-
 
 .section-title-box {
   margin-bottom: 30px;
@@ -350,6 +354,63 @@ header {
   -webkit-border-radius: 9000px;
   -moz-border-radius: 9000px;
   border-radius: 9000px;
+}
+
+/*--------------------------------------------------------------
+## Sidebar
+--------------------------------------------------------------*/
+.info-list {
+  list-style: none;
+  padding: 40px;
+  background-color: #000;
+}
+
+.info-list li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  color: #fff;
+  display: flex;
+}
+
+.info-list li .title {
+  display: inline-block;
+  width: 50%;
+  margin-bottom: 0px;
+}
+
+.info-list li:last-child {
+  border-bottom: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+/*--------------------------------------------------------------
+## Class Information
+--------------------------------------------------------------*/
+.class-instructions ul li {
+  display: inline-block;
+  margin-right: 36px;
+  margin-bottom: 22px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.555;
+}
+
+.class-instructions ul li:before {
+  border: 1px solid #e5ba03;
+  border-radius: 50%;
+  display: inline-block;
+  content: "";
+  top: 1px;
+  margin-right: 11px;
+  position: relative;
+  width: 15px;
+  height: 15px;
+}
+
+.card-title {
+  text-transform: uppercase;
 }
 
 /*--------------------------------------------------------------
