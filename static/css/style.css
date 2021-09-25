@@ -301,6 +301,29 @@ header {
 }
 
 /*--------------------------------------------------------------
+## Membership
+--------------------------------------------------------------*/
+.pt-service-media {
+  margin: 30px 0 15px;
+  background: #111111;
+  color: #fff;
+  height: 90px;
+  width: 90px;
+  line-height: 90px;
+  font-size: 52px;
+  text-align: center;
+  display: inline-block;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -webkit-border-radius: 9000px;
+  -moz-border-radius: 9000px;
+  border-radius: 9000px;
+}
+
+/*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
 .footer-top {
