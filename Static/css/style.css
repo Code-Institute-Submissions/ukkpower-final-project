@@ -117,20 +117,71 @@ header {
 
 .membership-call {
   background-color: #eceff4;
-  padding: 42px 0 25px;  
+  padding: 42px 0 25px;
 }
 
 .membership-call .icon-btn {
-    border: 1px solid #1b1f23;
-    border-radius: 5px;
-    color: #1b1f23;
-    font-size: 15px;
-    font-weight: 700;
-    display: inline-block;
-    padding: 18px 45px;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+  border: 1px solid #1b1f23;
+  border-radius: 5px;
+  color: #1b1f23;
+  font-size: 15px;
+  font-weight: 700;
+  display: inline-block;
+  padding: 18px 45px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*--------------------------------------------------------------
+## Newsletter Call To Action
+--------------------------------------------------------------*/
+
+.newsletter {
+  background-color: #1b1f23;
+  padding: 40px 0 30px;
+}
+
+.newsletter .sub-title {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+.newsletter p {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.newsletter .form-group {
+  margin-bottom: 0;
+  position: relative;
+  width: 100%;
+}
+
+.newsletter .form-group input[type=email] {
+  background-color: #f8f9fa;
+  border: 0;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  height: 59px;
+  padding: 0 150px 0 20px;
+}
+
+.newsletter .form-group input[type=submit] {
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 300;
+  height: 49px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 164px;
+  letter-spacing: 3px;
 }
 
 /*--------------------------------------------------------------
