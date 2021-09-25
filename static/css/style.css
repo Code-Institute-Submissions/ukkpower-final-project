@@ -33,6 +33,35 @@ h6 {
   font-weight: 800;
 }
 
+table {
+  border: 1px solid #eeeeee;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+th {
+  text-align: center;
+  font-weight: 400;
+  padding: 15px 0;
+  padding: 15px!important;
+  text-align: center;
+  border: 1px solid rgb(255 255 255 / 0.2);
+  text-transform: uppercase;
+  color: var(--dark-color);
+  background: #f0f0f0;
+}
+
+table tbody td {
+  position: relative;
+  border: 1px solid rgb(189 182 182 / 20%);
+  line-height: normal;
+  -webkit-box-sizing: initial;
+  box-sizing: initial;
+  padding: 15px!important;
+  text-align: center;
+}
+
+
 .section-title-box {
   margin-bottom: 30px;
     position: relative;
