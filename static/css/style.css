@@ -1,3 +1,5 @@
+@import url("flaticon/flaticon.css");
+
 /*--------------------------------------------------------------
 ## Main
 --------------------------------------------------------------*/
@@ -21,8 +23,49 @@ section {
   padding-bottom: 5rem;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Teko', sans-serif;
+  font-weight: 800;
+}
+
+.section-title-box {
+  margin-bottom: 30px;
+    position: relative;
+}
+
+.section-title {
+  font-size: 56px;
+  line-height: 64px;
+  z-index: 9;
+  position: relative;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+}
+
+.section-info {
+  color: #777777;
+}
+
+.section-sub-title {
+  line-height: 1;
+  letter-spacing: 1px;
+  padding: 0;
+  text-transform: uppercase;
+  color: #eeeeee;
+  font-family: var(--title-fonts);
+  font-weight: 800;
+  font-size: 8em;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  right: 0;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
 }
 
 /*--------------------------------------------------------------
@@ -108,6 +151,42 @@ header {
 .inspirational .text-primary {
   -webkit-text-stroke: 1px #fff;
   -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+
+/*--------------------------------------------------------------
+## Features
+--------------------------------------------------------------*/
+.icon-box-section {
+  position: relative;
+  padding: 0px 15px;
+}
+
+.icon-box-section .icon-box-icon i {
+  font-size: 72px !important;
+  line-height: 80px;
+  color: red;
+}
+
+/*--------------------------------------------------------------
+## Contact Call To Action
+--------------------------------------------------------------*/
+
+.contact-call {
+  background-color: #111111;
+  padding: 42px 0 25px;
+}
+
+.contact-call .icon-btn {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  display: inline-block;
+  padding: 18px 45px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /*--------------------------------------------------------------
