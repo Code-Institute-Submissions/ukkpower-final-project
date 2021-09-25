@@ -96,6 +96,21 @@ header {
 }
 
 /*--------------------------------------------------------------
+## Inspirational
+--------------------------------------------------------------*/
+.inspirational {
+  font-family: 'Teko', sans-serif;
+  background-color: #1b1f23;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.inspirational .text-primary {
+  -webkit-text-stroke: 1px #fff;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+
+/*--------------------------------------------------------------
 ## Page Banner
 --------------------------------------------------------------*/
 
