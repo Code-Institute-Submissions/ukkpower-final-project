@@ -75,6 +75,43 @@ header {
 }
 
 /*--------------------------------------------------------------
+## Page Banner
+--------------------------------------------------------------*/
+
+.page-banner {
+  padding-top: 194px;
+  position: relative;
+}
+
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+.banner-title {
+  color: #fff;
+  font-size: 62px;
+  position: relative;
+  -webkit-text-stroke: 1px #fff;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+
+.breadcrumb {
+  background: transparent;
+  padding: 10px !important;
+  margin: 0;
+  justify-content: center;
+  position: relative;
+}
+
+/*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
 
