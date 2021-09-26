@@ -428,6 +428,36 @@ header {
 }
 
 /*--------------------------------------------------------------
+## About Us
+--------------------------------------------------------------*/
+.about-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 34px;
+  padding-left: 0px;
+}
+
+.about-list ul li {
+  display: inline-block;
+  color: #252525;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 17px;
+  line-height: 1.555;
+  width: 50%;
+}
+
+.about-list ul li:before {
+  border: 1px solid #e5ba03;
+  border-radius: 50%;
+  display: inline-block;
+  content: "";
+  margin-right: 11px;
+  position: relative;
+  width: 14px;
+  height: 14px;
+}
+/*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
 .footer-top {
