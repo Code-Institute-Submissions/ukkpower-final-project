@@ -457,6 +457,84 @@ header {
   width: 14px;
   height: 14px;
 }
+
+/*--------------------------------------------------------------
+## Contact Us
+--------------------------------------------------------------*/
+.contact-us-info .address-info {
+  border: 1px solid #eee;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 992px) {
+.contact-us-info .address-info {
+    padding: 49px 20px;
+}
+}
+
+.contact-us-info .address-info h3 {
+  line-height: 20px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 12px;
+  padding-bottom: 3px;
+}
+
+.contact-us-info .address-info p {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.contact-form .contact-form-wrapper .form-title p {
+  color: #252525;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.contact-us-info .address-info p a {
+  display: block;
+  color: #717171;
+  word-break: break-word;
+}
+
+.contact-us-info .address-info i {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.contact-form .contact-form-wrapper .form-group {
+  margin-bottom: 30px;
+}
+
+.contact-form .contact-form-wrapper .form-group textarea {
+  border: 1px solid #d9d9d9;
+  border-radius: 0;
+  box-shadow: none;
+  color: #252525;
+  font-weight: 400;
+  font-size: 16px;
+  width: 100%;
+  height: 227px;
+  padding: 14px 20px;
+  margin-bottom: 26px;
+}
+
+.contact-map-area {
+  height: 574px;
+  padding-left: 25px;
+}
+
+.contact-map-area iframe {
+  height: 100%;
+  width: 100%;
+}
+
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
