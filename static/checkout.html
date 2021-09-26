@@ -62,8 +62,7 @@
 
     <main>
         <section class="page-banner">
-            <div class="bg-overlay"
-                style="background-image: url('imgs/membership-bg.jpg');">
+            <div class="bg-overlay" style="background-image: url('imgs/membership-bg.jpg');">
             </div>
             <div class="container">
                 <div class="row">
@@ -89,6 +88,84 @@
                     the readable content of a page when looking at its layout.
                 </p>
             </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="customer-options">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="well">
+                                        <p>Have a coupon?&nbsp;<a href="#."> Click here to enter your code </a></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="well">
+                                        <p>Returning customer?&nbsp;<a href="#."> Click here to login </a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="checkout-form row g-4">
+                    <h3>Billing Details</h3>
+
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Name">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" class="form-control" placeholder="Email">
+                    </div>
+
+                    <h3>Shipping Address</h3>
+
+                    <div class="col-md-6">
+                        <input type="text" class="form-control mb-0" placeholder="First name">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control mb-0" placeholder="Last name">
+                    </div>
+
+                    <div class="col-12">
+                        <input type="text" class="form-control" id="inputAddress" placeholder="Address 01">
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="Address 01">
+                    </div>
+
+                    <div class="col-md-6">
+                        <select id="inputState" class="form-control">
+                            <option selected="">Country</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <select id="inputState" class="form-control">
+                            <option selected="">County</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" id="inputZip" placeholder="Zip">
+                    </div>
+
+                   
+                        <div class="col-6">
+                            <a href="shop.html" class="backcart"><i class="fas fa-chevron-left"></i> Back To
+                                Cart</a>
+                        </div>
+                        <div class="col-6 d-flex justify-content-end">
+                            <button type="submit" class="btn btn-primary">Next Step</button>
+                        </div>
+                    
+                </form>
+
+            </div>
+
         </section>
 
         <section class="membership-call">

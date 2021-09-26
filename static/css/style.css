@@ -48,7 +48,7 @@ th {
   text-align: center;
   font-weight: 400;
   padding: 15px 0;
-  padding: 15px!important;
+  padding: 15px !important;
   text-align: center;
   border: 1px solid rgb(255 255 255 / 0.2);
   text-transform: uppercase;
@@ -62,13 +62,13 @@ table tbody td {
   line-height: normal;
   -webkit-box-sizing: initial;
   box-sizing: initial;
-  padding: 15px!important;
+  padding: 15px !important;
   text-align: center;
 }
 
 .section-title-box {
   margin-bottom: 30px;
-    position: relative;
+  position: relative;
 }
 
 .section-title {
@@ -473,9 +473,9 @@ header {
 }
 
 @media (min-width: 992px) {
-.contact-us-info .address-info {
+  .contact-us-info .address-info {
     padding: 49px 20px;
-}
+  }
 }
 
 .contact-us-info .address-info h3 {
@@ -657,6 +657,32 @@ header {
 #checkout-btn {
   padding: 22px 85px;
 }
+
+/*--------------------------------------------------------------
+## Checkout
+--------------------------------------------------------------*/
+.checkout-form {
+  padding-bottom: 15px;
+}
+
+@media (min-width: 992px) {
+  .checkout-form {
+    border: 1px solid #e5e8ed;
+    padding: 47px 50px 20px;
+    margin-bottom: 100px;
+  }
+}
+
+.checkout-form h3 {
+  border-bottom: 1px solid #e5e8ed;
+  color: #717171;
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+
 
 /*--------------------------------------------------------------
 ## Footer
