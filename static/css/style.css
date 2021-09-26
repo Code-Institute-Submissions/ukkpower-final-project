@@ -536,6 +536,129 @@ header {
 }
 
 /*--------------------------------------------------------------
+## Cart
+--------------------------------------------------------------*/
+.responsive-table .cart-table {
+  display: table;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.responsive-table .cart-table .signle-item-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+.responsive-table .cart-table .signle-item-row .del-btn a {
+  background-color: #1b1f23;
+  color: #fff;
+  display: block;
+  text-align: center;
+  padding: 2px 3px 2px;
+  width: 19px;
+  height: 19px;
+  font-size: 10px;
+  margin-right: 22px;
+}
+
+.pro-qty {
+  position: relative;
+  margin-right: 20px;
+}
+
+.pro-qty input {
+  background-color: #252525;
+  border-color: #252525;
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  width: 69px;
+  height: 46px;
+  line-height: 46px;
+  text-align: center;
+}
+
+.pro-qty .qty-btn {
+  background-color: #e5ba03;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  width: 27px;
+  height: 46px;
+  line-height: 25px;
+  text-align: center;
+}
+
+.pro-qty .qty-btn.inc {
+  position: absolute;
+  top: 0;
+  height: 23px;
+}
+
+.pro-qty .qty-btn.dec {
+  position: absolute;
+  bottom: 0;
+  height: 23px;
+}
+
+
+.coupon-code-main .form-control-plaintext {
+  background-color: #e5e8ed;
+  color: #717171;
+  margin-bottom: 15px;
+  margin-right: 10px;
+  width: 115px;
+}
+
+.cart-total {
+  display: block;
+  padding-bottom: 40px;
+}
+
+.cart-total h4 {
+  color: #3bd344;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 41px;
+}
+
+.cart-total ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cart-total ul li {
+  border-bottom: 1px solid #e5e8ed;
+  display: block;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+
+.cart-total ul li span {
+  display: inline-block;
+}
+
+.cart-total ul li span.label {
+  font-size: 18px;
+}
+
+.cart-total ul li span.price {
+  font-size: 16px;
+  float: right;
+}
+
+#checkout-btn {
+  padding: 22px 85px;
+}
+
+/*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
 .footer-top {

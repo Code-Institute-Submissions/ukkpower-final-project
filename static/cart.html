@@ -67,7 +67,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 text-center">
-                        <h1 class="banner-title">Contact Us</h1>
+                        <h1 class="banner-title">Cart</h1>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">
@@ -90,90 +90,85 @@
             </div>
         </section>
 
-        <section class="contact-us-info">
-            <div class="container">
+        <section class="cart">
+            <div class="container small-container">
                 <div class="row">
-                    <div class="col-4">
-                        <div class="address-info">
-                            <i class="icon-call-out icons"></i>
-                            <h3>Contact</h3>
-                            <p><a href="tele: +1-202-555-0172">Tel: + 012-345-6789</a>
-                                <a href="tele: +1-202-555-0187">Mobile: + 025-879-56872</a>
-                            </p>
+                    <div class="col-md-12">
+                        <div class="responsive-table">
+                            <table class="cart-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" colspan="2" data-label="Product">Product</th>
+                                        <th scope="col" data-label="Price">Price</th>
+                                        <th scope="col" data-label="Quantity">Quantity</th>
+                                        <th scope="col" data-label="Total">Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="2" data-th="Product" data-label="Product">
+                                            <div class="signle-item-row">
+                                                <div class="del-btn"><a href="#.">✕</a></div>
+                                                <div class="single-item">
+                                                    <img src="imgs/products/cart-img-1.png" alt="">
+                                                    <a href="#.">Rope Jumper</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td data-th="Price" data-label="Price">$16.00</td>
+                                        <td data-th="Quantity" data-label="Quantity">
+                                            <div class="pro-qty">
+                                                <input type="text" id="quantity" title="Quantity" value="01">
+                                                <a href="#" class="inc qty-btn"><i class="icon-arrow-up icons"></i></a><a
+                                                    href="#" class="dec qty-btn"><i class="icon-arrow-down icons"></i></a>
+                                            </div>
+                                        </td>
+                                        <td data-th="Total" data-label="Total"><b>$32.00</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" data-th="Product" data-label="Product">
+                                            <div class="signle-item-row">
+                                                <div class="del-btn"><a href="#.">✕</a></div>
+                                                <div class="single-item">
+                                                    <img src="images/cart-img-2.png" alt="">
+                                                    <a href="#.">Yoga Mat</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td data-th="Price" data-label="Price">$16.00</td>
+                                        <td data-th="Quantity" data-label="Quantity">
+                                            <div class="pro-qty">
+                                                <input type="text" id="quantity" title="Quantity" value="01">
+                                                <a href="#" class="inc qty-btn"><i class="icon-arrow-up icons"></i></a><a
+                                                    href="#" class="dec qty-btn"><i class="icon-arrow-down icons"></i></a>
+                                            </div>
+                                        </td>
+                                        <td data-th="Total" data-label="Total"><b>$32.00</b></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="address-info">
-                            <i class="icon-location-pin icons"></i>
-                            <h3>Address</h3>
-                            <p>18 Cherry Hill Avenue <br>
-                                Niagara Falls,California, NY 14304</p>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="address-info">
-                            <i class="icon-envelope-open icons"></i>
-                            <h3>Email</h3>
-                            <p>
-                                <a href="mailto:info@fitnics.com">info@fitnics.com
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="contact-form mb-md-90">
-                            <form class="contact-form-wrapper" id="contact-form"
-                                action="http://whizthemes.com/mail-php/raju/arden/mail.php" method="post">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="form-title mb-5">
-                                            <h2>Send Message</h2>
-                                            <p>If you need any information, feel free to send me message I will try
-                                                to answer your and give you proper tips about your message</p>
-                                        </div>
-                                    </div>
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-end">
+                                <div class="button-group">
+                                    <a href="#." class="btn btn-secondary">Update Cart</a>
+                                    <a href="checkout-billing.html" class="btn btn-primary">Checkout</a>
                                 </div>
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="row row-gutter-12">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <input class="form-control" type="text" name="con_name"
-                                                        placeholder="Name">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <input class="form-control" type="email" name="con_email"
-                                                        placeholder="Email">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group mb-0">
-                                                    <textarea name="con_message"
-                                                        placeholder="Write message here"></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group mb-0">
-                                                    <button class="btn btn-secondary" type="submit">SEND
-                                                        MESSAGE</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
+                            </div>
                         </div>
-                        <!-- Message Notification -->
-                        <div class="form-message"></div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="contact-map-area">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8402891185374!2d144.95373631590425!3d-37.81720974201477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2ssg!4v1607294780661!5m2!1sen!2ssg"></iframe>
+                        <div class="cart-total">
+                            <h4>CartTotals</h4>
+                            <ul>
+                                <li>
+                                    <span class="label">Sub Total:</span>
+                                    <span class="price">$140</span>
+                                </li>
+                                <li>
+                                    <span class="label">Total:</span>
+                                    <span class="price">$140</span>
+                                </li>
+                            </ul>
+                            <a id="checkout-btn" href="checkout-billing.html" class="btn btn-primary">Proceed To Checkout</a>
                         </div>
                     </div>
                 </div>
