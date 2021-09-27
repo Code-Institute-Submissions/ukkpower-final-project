@@ -1,0 +1,711 @@
+@import url("flaticon/flaticon.css");
+
+/*--------------------------------------------------------------
+## Main
+--------------------------------------------------------------*/
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: #ec6b81;
+  text-decoration: none;
+  transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+}
+
+aside,
+section {
+  padding-top: 5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Teko', sans-serif;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+table {
+  border: 1px solid #eeeeee;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+th {
+  text-align: center;
+  font-weight: 400;
+  padding: 15px 0;
+  padding: 15px !important;
+  text-align: center;
+  border: 1px solid rgb(255 255 255 / 0.2);
+  text-transform: uppercase;
+  color: var(--dark-color);
+  background: #f0f0f0;
+}
+
+table tbody td {
+  position: relative;
+  border: 1px solid rgb(189 182 182 / 20%);
+  line-height: normal;
+  -webkit-box-sizing: initial;
+  box-sizing: initial;
+  padding: 15px !important;
+  text-align: center;
+}
+
+.section-title-box {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.section-title {
+  font-size: 56px;
+  line-height: 64px;
+  z-index: 9;
+  position: relative;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+}
+
+.section-info {
+  color: #777777;
+}
+
+.section-sub-title {
+  line-height: 1;
+  letter-spacing: 1px;
+  padding: 0;
+  text-transform: uppercase;
+  color: #eeeeee;
+  font-family: var(--title-fonts);
+  font-weight: 800;
+  font-size: 8em;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  right: 0;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+}
+
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+header {
+  padding: 0 15px;
+}
+
+.navbar-brand img {
+  margin-right: 10px;
+  height: 28px;
+}
+
+.shop-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.icon {
+  color: #0f0f0f;
+  font-size: 24px;
+  transition: all .3s ease-out;
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -ms-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+}
+
+.shop-cart {
+  display: inline-block;
+  margin-right: 26px;
+  position: relative;
+}
+
+.shop-button {
+  display: inline-block;
+  position: relative;
+}
+
+.shop-count {
+  background-color: #ec6b81;
+  display: inline-block;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  left: 17px;
+  top: calc(100% - 16px);
+  border-radius: 50%;
+}
+
+/*--------------------------------------------------------------
+## Hero
+--------------------------------------------------------------*/
+
+.hero {
+  color: white;
+  background-image: url("https://peacefulqode.com/themes/gymster/html/images/main-home/26.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*--------------------------------------------------------------
+## Inspirational
+--------------------------------------------------------------*/
+.inspirational {
+  font-family: 'Teko', sans-serif;
+  background-color: #1b1f23;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.inspirational .text-primary {
+  -webkit-text-stroke: 1px #fff;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+
+/*--------------------------------------------------------------
+## Features
+--------------------------------------------------------------*/
+.icon-box-section {
+  position: relative;
+  padding: 0px 15px;
+}
+
+.icon-box-section .icon-box-icon i {
+  font-size: 72px !important;
+  line-height: 80px;
+  color: red;
+}
+
+/*--------------------------------------------------------------
+## Contact Call To Action
+--------------------------------------------------------------*/
+
+.contact-call {
+  background-color: #111111;
+  padding: 42px 0 25px;
+}
+
+.contact-call .icon-btn {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  display: inline-block;
+  padding: 18px 45px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*--------------------------------------------------------------
+## Page Banner
+--------------------------------------------------------------*/
+
+.page-banner {
+  padding-top: 194px;
+  position: relative;
+  padding-bottom: 5rem;
+}
+
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+.overlay-main {
+  background-color: #000;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.opacity-06 {
+  opacity: 0.6;
+}
+
+.banner-title {
+  color: #fff;
+  font-size: 82px;
+  position: relative;
+  -webkit-text-stroke: 1px #fff;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  text-transform: uppercase;
+}
+
+.breadcrumb {
+  background: transparent;
+  padding: 10px !important;
+  margin: 0;
+  justify-content: center;
+  position: relative;
+}
+
+/*--------------------------------------------------------------
+## Membership Call To Action
+--------------------------------------------------------------*/
+
+.membership-call {
+  background-color: #eceff4;
+  padding: 42px 0 25px;
+}
+
+.membership-call .icon-btn {
+  border: 1px solid #1b1f23;
+  border-radius: 5px;
+  color: #1b1f23;
+  font-size: 15px;
+  font-weight: 700;
+  display: inline-block;
+  padding: 18px 45px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*--------------------------------------------------------------
+## Newsletter Call To Action
+--------------------------------------------------------------*/
+
+.newsletter {
+  background-color: #1b1f23;
+  padding: 40px 0 30px;
+}
+
+.newsletter .sub-title {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+.newsletter p {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.newsletter .form-group {
+  margin-bottom: 0;
+  position: relative;
+  width: 100%;
+}
+
+.newsletter .form-group input[type=email] {
+  background-color: #f8f9fa;
+  border: 0;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  height: 59px;
+  padding: 0 150px 0 20px;
+}
+
+.newsletter .form-group input[type=submit] {
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 300;
+  height: 49px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 164px;
+  letter-spacing: 3px;
+}
+
+/*--------------------------------------------------------------
+## Membership
+--------------------------------------------------------------*/
+.pt-service-media {
+  margin: 30px 0 15px;
+  background: #111111;
+  color: #fff;
+  height: 90px;
+  width: 90px;
+  line-height: 90px;
+  font-size: 52px;
+  text-align: center;
+  display: inline-block;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -webkit-border-radius: 9000px;
+  -moz-border-radius: 9000px;
+  border-radius: 9000px;
+}
+
+/*--------------------------------------------------------------
+## Sidebar
+--------------------------------------------------------------*/
+.info-list {
+  list-style: none;
+  padding: 40px;
+  background-color: #000;
+}
+
+.info-list li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  color: #fff;
+  display: flex;
+}
+
+.info-list li .title {
+  display: inline-block;
+  width: 50%;
+  margin-bottom: 0px;
+}
+
+.info-list li:last-child {
+  border-bottom: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+/*--------------------------------------------------------------
+## Class Information
+--------------------------------------------------------------*/
+.class-instructions ul li {
+  display: inline-block;
+  margin-right: 36px;
+  margin-bottom: 22px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.555;
+}
+
+.class-instructions ul li:before {
+  border: 1px solid #e5ba03;
+  border-radius: 50%;
+  display: inline-block;
+  content: "";
+  top: 1px;
+  margin-right: 11px;
+  position: relative;
+  width: 15px;
+  height: 15px;
+}
+
+.card-title {
+  text-transform: uppercase;
+}
+
+/*--------------------------------------------------------------
+## About Us
+--------------------------------------------------------------*/
+.about-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 34px;
+  padding-left: 0px;
+}
+
+.about-list ul li {
+  display: inline-block;
+  color: #252525;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 17px;
+  line-height: 1.555;
+  width: 50%;
+}
+
+.about-list ul li:before {
+  border: 1px solid #e5ba03;
+  border-radius: 50%;
+  display: inline-block;
+  content: "";
+  margin-right: 11px;
+  position: relative;
+  width: 14px;
+  height: 14px;
+}
+
+/*--------------------------------------------------------------
+## Contact Us
+--------------------------------------------------------------*/
+.contact-us-info .address-info {
+  border: 1px solid #eee;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 992px) {
+  .contact-us-info .address-info {
+    padding: 49px 20px;
+  }
+}
+
+.contact-us-info .address-info h3 {
+  line-height: 20px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 12px;
+  padding-bottom: 3px;
+}
+
+.contact-us-info .address-info p {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.contact-form .contact-form-wrapper .form-title p {
+  color: #252525;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.contact-us-info .address-info p a {
+  display: block;
+  color: #717171;
+  word-break: break-word;
+}
+
+.contact-us-info .address-info i {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.contact-form .contact-form-wrapper .form-group {
+  margin-bottom: 30px;
+}
+
+.contact-form .contact-form-wrapper .form-group textarea {
+  border: 1px solid #d9d9d9;
+  border-radius: 0;
+  box-shadow: none;
+  color: #252525;
+  font-weight: 400;
+  font-size: 16px;
+  width: 100%;
+  height: 227px;
+  padding: 14px 20px;
+  margin-bottom: 26px;
+}
+
+.contact-map-area {
+  height: 574px;
+  padding-left: 25px;
+}
+
+.contact-map-area iframe {
+  height: 100%;
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Cart
+--------------------------------------------------------------*/
+.responsive-table .cart-table {
+  display: table;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.responsive-table .cart-table .signle-item-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+.responsive-table .cart-table .signle-item-row .del-btn a {
+  background-color: #1b1f23;
+  color: #fff;
+  display: block;
+  text-align: center;
+  padding: 2px 3px 2px;
+  width: 19px;
+  height: 19px;
+  font-size: 10px;
+  margin-right: 22px;
+}
+
+.pro-qty {
+  position: relative;
+  margin-right: 20px;
+}
+
+.pro-qty input {
+  background-color: #252525;
+  border-color: #252525;
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  width: 69px;
+  height: 46px;
+  line-height: 46px;
+  text-align: center;
+}
+
+.pro-qty .qty-btn {
+  background-color: #e5ba03;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  width: 27px;
+  height: 46px;
+  line-height: 25px;
+  text-align: center;
+}
+
+.pro-qty .qty-btn.inc {
+  position: absolute;
+  top: 0;
+  height: 23px;
+}
+
+.pro-qty .qty-btn.dec {
+  position: absolute;
+  bottom: 0;
+  height: 23px;
+}
+
+
+.coupon-code-main .form-control-plaintext {
+  background-color: #e5e8ed;
+  color: #717171;
+  margin-bottom: 15px;
+  margin-right: 10px;
+  width: 115px;
+}
+
+.cart-total {
+  display: block;
+  padding-bottom: 40px;
+}
+
+.cart-total h4 {
+  color: #3bd344;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 41px;
+}
+
+.cart-total ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cart-total ul li {
+  border-bottom: 1px solid #e5e8ed;
+  display: block;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+
+.cart-total ul li span {
+  display: inline-block;
+}
+
+.cart-total ul li span.label {
+  font-size: 18px;
+}
+
+.cart-total ul li span.price {
+  font-size: 16px;
+  float: right;
+}
+
+#checkout-btn {
+  padding: 22px 85px;
+}
+
+/*--------------------------------------------------------------
+## Checkout
+--------------------------------------------------------------*/
+.checkout-form {
+  padding-bottom: 15px;
+}
+
+@media (min-width: 992px) {
+  .checkout-form {
+    border: 1px solid #e5e8ed;
+    padding: 47px 50px 20px;
+    margin-bottom: 100px;
+  }
+}
+
+.checkout-form h3 {
+  border-bottom: 1px solid #e5e8ed;
+  color: #717171;
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+.footer-top {
+  padding: 60px 0px 0px 0px;
+}
+
+.footer-address li {
+  margin-bottom: 24px;
+  position: relative;
+  padding-left: 30px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.footer-address li i {
+  position: absolute;
+  left: 0px;
+  top: 5px;
+  font-size: 18px;
+}
+
+.footer-opening-times li span:last-child {
+  float: right;
+}
