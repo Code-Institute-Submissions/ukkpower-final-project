@@ -29,7 +29,7 @@ class GymClass(models.Model):
     period = models.CharField(max_length=254)
     students = models.IntegerField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    trainer = models.ManyToManyField('Trainer')
+    trainer = models.ManyToManyField('Trainer', null=True, blank=True)
 
     def __str__(self):
         return self.name
