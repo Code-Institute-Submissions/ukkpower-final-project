@@ -25,7 +25,7 @@ class GymClass(models.Model):
     name = models.CharField(max_length=254)
     description = models.TextField()
     level = models.CharField(max_length=254)
-    duration = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    duration = models.IntegerField()
     period = models.CharField(max_length=254)
     students = models.IntegerField()
     price = models.DecimalField(max_digits=6, decimal_places=2)

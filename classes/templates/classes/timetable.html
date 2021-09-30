@@ -53,17 +53,18 @@
                             </tr>
                         </thead>
                         <tbody>
+                            {% for entry in timetable_entries %}
                             <tr>
                                 <td>9:00 am</td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
-                                   
+                                    {% if entry.time_slot  == '9:00 am' and entry.day == 'Monday'%}
                                         <div class="navigation-inner-event-content">
                                             <a title="OPEN GYM"
-                                                href="http://gymster.peacefulqode.com/timetable/event/open-gym/"
-                                                class="event-title">OPEN YOGA</a>
-                                            <p class="event-subtitle pt-text-dark">OPEN YOGA</p>
+                                                href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                         </div>
-                                    
+                                        {% endif %}
                                 </td>
                                 <td class="navigation-shortcode-event  navigation-event-vertical-default"
                                     data-column-id="57" colspan="1" data-row_height="45">
@@ -600,6 +601,7 @@
                                     data-column-id="62" colspan="1" data-row_height="45">
                                 </td>
                             </tr>
+                            {% endfor %}
                         </tbody>
                     </table>
 
