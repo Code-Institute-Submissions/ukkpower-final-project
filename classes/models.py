@@ -1,4 +1,5 @@
 from django.db import models
+from tinymce.models import HTMLField
 
 
 class Category(models.Model):
@@ -23,7 +24,7 @@ class GymClass(models.Model):
 
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
-    description = models.TextField()
+    description = HTMLField()
     level = models.CharField(max_length=254)
     duration = models.IntegerField()
     period = models.CharField(max_length=254)

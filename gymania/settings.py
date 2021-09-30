@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'home',
-    'classes'
+    'classes',
+    'tinymce',
 ]
 
 SITE_ID = 1
