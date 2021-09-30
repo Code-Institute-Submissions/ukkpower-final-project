@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<main>
+    <section class="page-banner">
+        <div class="bg-overlay"
+            style="background-image: url('{% static "imgs/classes-bg.jpg" %}');">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h1 class="banner-title">Trainers</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{% url 'home' %}">
+                                    <i class="icon-home icons"></i>Home</a></li>
+                            <li class="breadcrumb-item text-white" aria-current="page">Trainers</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-title text-center">
+        <div class="section-title-box">
+            <span class="section-sub-title">GOALS</span>
+            <h2 class="section-title">FIND THE CLASS THAT SUITS YOU</h2>
+            <p class="section-info">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                the readable content of a page when looking at its layout.
+            </p>
+        </div>
+    </section>
+
+    <section  class="mb-5">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                {% for trainer in trainers %}
+                <div class="col">
+                    <a href="{% url 'trainer' trainer.id %}">
+                    <div class="card">
+                        {% if trainer.image %}
+                            <img class="card-img-top" src="{{ trainer.image.url }}" alt="{{ trainer.name }}">
+                        {% else %}
+                            <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ trainer.name }}">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title">{{ trainer.name }}</h5>
+                            <p class="card-text">{{ trainer.bio }}</p>
+                        </div>
+                    </div>
+                </a>
+                </div>
+                {% endfor %}
+        </div>
+    </section>
+
+    <section class="membership-call">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>If You Are Interested<br>
+                        We Help You Stay Healty</h3>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="contact-us.html" class="icon-btn"><i class="fas fa-arrow-circle-right"></i> See
+                        Membership</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5">
+                    <h4 class="sub-title">Get info</h4>
+                    <p>Received Special Promotion And Insider Information
+                        About Upcoming Products</p>
+                </div>
+                <div class="col-md-7">
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Enter your Email!" id="newsletter"
+                            name="newsletter" type="email">
+                        <input class="form-control btn btn-primary" value="Subscribe" type="submit">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

@@ -29,7 +29,7 @@ class GymClass(models.Model):
     period = models.CharField(max_length=254)
     students = models.IntegerField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    trainer = models.ManyToManyField('Trainer', null=True, blank=True)
+    trainer = models.ManyToManyField('Trainer', blank=True)
 
     def __str__(self):
         return self.name
@@ -51,7 +51,7 @@ class Timetable(models.Model):
     gym_class = models.ForeignKey('GymClass', on_delete=models.CASCADE)
     start_date = models.DateField()
     end_date = models.DateField()
-    date = models.CharField(max_length=12)
+    day = models.CharField(max_length=12)
     time_slot = models.CharField(max_length=12)
     trainer = models.ForeignKey('Trainer', on_delete=models.CASCADE)
 
