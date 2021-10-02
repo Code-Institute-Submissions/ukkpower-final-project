@@ -36,6 +36,13 @@
         <div class="container small-container">
             <div class="row">
                 <div class="col-md-12">
+                    {% if messages %}
+                    <ul class="alert alert-success list-unstyled" role="alert">
+                        {% for message in messages %}
+                        <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
                     <div class="responsive-table">
                         <table class="cart-table">
                             <thead>
@@ -52,7 +59,7 @@
                                         <tr>
                                             <td colspan="2" data-th="Product" data-label="Product">
                                                 <div class="signle-item-row">
-                                                    <div class="del-btn"><a href="#.">✕</a></div>
+                                                    <a class="delete-item" data-item-id = "{{ item.item_id }}">✕</a>
                                                     <div class="single-item">
                                                         <a href="#.">{{ item.gym_class.name }}</a>
                                                     </div>
@@ -60,11 +67,12 @@
                                             </td>
                                             <td data-th="Price" data-label="Price">€{{ item.gym_class.price }}</td>
                                             <td data-th="Quantity" data-label="Quantity">
-                                                <div class="pro-qty">
-                                                    <input type="text" id="quantity" title="Quantity" value="{{ item.quantity }}">
+                                                <form class="update-qty" method="POST" action="{% url 'update_cart' item.item_id %}">
+                                                    {% csrf_token %}
+                                                    <input type="text" id="quantity" name="quantity" value="{{ item.quantity }}">
                                                     <a href="#" class="inc qty-btn"><i class="icon-arrow-up icons"></i></a><a
                                                         href="#" class="dec qty-btn"><i class="icon-arrow-down icons"></i></a>
-                                                </div>
+                                                </form>
                                                 <a class="cart-update" href="">Update</a>
                                             </td>
                                             <td data-th="Total" data-label="Total"><b>€{{ item.item_total }}</b></td>
@@ -84,7 +92,7 @@
                         <div class="col-12 d-flex justify-content-end">
                             <div class="button-group">
                                 <a href="{% url 'timetable' %}" class="btn btn-secondary">Add another class</a>
-                                <a href="checkout-billing.html" class="btn btn-primary">Checkout</a>
+                                <a href="checkout-billing.html" class="btn btn-primary {% if not cart_items %}disabled{% endif %}">Checkout</a>
                             </div>
                         </div>
                     </div>
@@ -100,7 +108,7 @@
                                 <span class="price">€{{ total }}</span>
                             </li>
                         </ul>
-                        <a id="checkout-btn" href="checkout-billing.html" class="btn btn-primary">Proceed To
+                        <a id="checkout-btn" href="checkout-billing.html" class="btn btn-primary {% if not cart_items %}disabled{% endif %}" {% if not cart_items %}disabled{% endif %}>Proceed To
                             Checkout</a>
                     </div>
                 </div>
@@ -147,7 +155,47 @@
 {% block postloadjs %}
 
 <script type="text/javascript">
+    // Product Qty
+    var proQty = $(".update-qty");
+    proQty.append('<a href="#" class="inc qty-btn"><i class="icon-arrow-up icons"></i></a>');
+    proQty.append('<a href="#" class="dec qty-btn"><i class="icon-arrow-down icons"></i></a>');
+    
+    $('.qty-btn').on('click', function(e) {
+        e.preventDefault();
+        var $button = $(this);
+        var oldValue = $button.parent().find('#quantity').val();
+        if ($button.hasClass('inc')) {
+            var newVal = parseFloat(oldValue) + 1;
+        } else {
+            // Don't allow decrementing below zero
+            if (oldValue > 1) {
+            var newVal = parseFloat(oldValue) - 1;
+            } else {
+            newVal = 1;
+            }
+        }
+        $button.parent().find('#quantity').val(newVal);
+    });
 
 
+    // Update quantity on click
+    $('.cart-update').click(function(e) {
+        e.preventDefault();
+        var form = $(this).prev('.update-qty');
+        form.submit();
+    })
+
+    // Remove item and reload on click
+    $('.delete-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).data('itemId');
+        var url = `/cart/delete/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken};
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
 </script>
 {% endblock %}

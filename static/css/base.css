@@ -564,12 +564,12 @@ header {
   margin-right: 22px;
 }
 
-.pro-qty {
+.update-qty {
   position: relative;
   margin-right: 20px;
 }
 
-.pro-qty input {
+.update-qty input {
   background-color: #252525;
   border-color: #252525;
   color: #fff;
@@ -583,7 +583,7 @@ header {
   text-align: center;
 }
 
-.pro-qty .qty-btn {
+.update-qty .qty-btn {
   background-color: #e5ba03;
   color: #fff;
   display: inline-block;
@@ -594,13 +594,13 @@ header {
   text-align: center;
 }
 
-.pro-qty .qty-btn.inc {
+.update-qty .qty-btn.inc {
   position: absolute;
   top: 0;
   height: 23px;
 }
 
-.pro-qty .qty-btn.dec {
+.update-qty .qty-btn.dec {
   position: absolute;
   bottom: 0;
   height: 23px;
