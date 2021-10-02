@@ -607,12 +607,8 @@ header {
 }
 
 
-.coupon-code-main .form-control-plaintext {
-  background-color: #e5e8ed;
-  color: #717171;
-  margin-bottom: 15px;
-  margin-right: 10px;
-  width: 115px;
+.cart-update {
+  padding-left: 40px;
 }
 
 .cart-total {

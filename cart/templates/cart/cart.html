@@ -12,7 +12,7 @@
                     <h1 class="banner-title">Cart</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">
+                            <li class="breadcrumb-item"><a href="{% url 'home' %}">
                                     <i class="icon-home icons"></i>Home</a></li>
                             <li class="breadcrumb-item text-white" aria-current="page">About</li>
                         </ol>
@@ -47,53 +47,43 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td colspan="2" data-th="Product" data-label="Product">
-                                        <div class="signle-item-row">
-                                            <div class="del-btn"><a href="#.">✕</a></div>
-                                            <div class="single-item">
-                                                <img src="imgs/products/cart-img-1.png" alt="">
-                                                <a href="#.">Rope Jumper</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td data-th="Price" data-label="Price">$16.00</td>
-                                    <td data-th="Quantity" data-label="Quantity">
-                                        <div class="pro-qty">
-                                            <input type="text" id="quantity" title="Quantity" value="01">
-                                            <a href="#" class="inc qty-btn"><i class="icon-arrow-up icons"></i></a><a
-                                                href="#" class="dec qty-btn"><i class="icon-arrow-down icons"></i></a>
-                                        </div>
-                                    </td>
-                                    <td data-th="Total" data-label="Total"><b>$32.00</b></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" data-th="Product" data-label="Product">
-                                        <div class="signle-item-row">
-                                            <div class="del-btn"><a href="#.">✕</a></div>
-                                            <div class="single-item">
-                                                <img src="images/cart-img-2.png" alt="">
-                                                <a href="#.">Yoga Mat</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td data-th="Price" data-label="Price">$16.00</td>
-                                    <td data-th="Quantity" data-label="Quantity">
-                                        <div class="pro-qty">
-                                            <input type="text" id="quantity" title="Quantity" value="01">
-                                            <a href="#" class="inc qty-btn"><i class="icon-arrow-up icons"></i></a><a
-                                                href="#" class="dec qty-btn"><i class="icon-arrow-down icons"></i></a>
-                                        </div>
-                                    </td>
-                                    <td data-th="Total" data-label="Total"><b>$32.00</b></td>
-                                </tr>
+                                {% if cart_items %}
+                                    {% for item in cart_items %}
+                                        <tr>
+                                            <td colspan="2" data-th="Product" data-label="Product">
+                                                <div class="signle-item-row">
+                                                    <div class="del-btn"><a href="#.">✕</a></div>
+                                                    <div class="single-item">
+                                                        <a href="#.">{{ item.gym_class.name }}</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td data-th="Price" data-label="Price">€{{ item.gym_class.price }}</td>
+                                            <td data-th="Quantity" data-label="Quantity">
+                                                <div class="pro-qty">
+                                                    <input type="text" id="quantity" title="Quantity" value="{{ item.quantity }}">
+                                                    <a href="#" class="inc qty-btn"><i class="icon-arrow-up icons"></i></a><a
+                                                        href="#" class="dec qty-btn"><i class="icon-arrow-down icons"></i></a>
+                                                </div>
+                                                <a class="cart-update" href="">Update</a>
+                                            </td>
+                                            <td data-th="Total" data-label="Total"><b>€{{ item.item_total }}</b></td>
+                                        </tr>                                
+                                    {% endfor %}
+                                {% else %}
+                                    <tr>
+                                        <td colspan="4">
+                                            <p class="lead mb-5">Your cart is empty.</p>
+                                        </td>
+                                    </tr>
+                                {% endif %}
                             </tbody>
                         </table>
                     </div>
                     <div class="row">
                         <div class="col-12 d-flex justify-content-end">
                             <div class="button-group">
-                                <a href="#." class="btn btn-secondary">Update Cart</a>
+                                <a href="{% url 'timetable' %}" class="btn btn-secondary">Add another class</a>
                                 <a href="checkout-billing.html" class="btn btn-primary">Checkout</a>
                             </div>
                         </div>
@@ -103,14 +93,15 @@
                         <ul>
                             <li>
                                 <span class="label">Sub Total:</span>
-                                <span class="price">$140</span>
+                                <span class="price">€{{ total }}</span>
                             </li>
                             <li>
                                 <span class="label">Total:</span>
-                                <span class="price">$140</span>
+                                <span class="price">€{{ total }}</span>
                             </li>
                         </ul>
-                        <a id="checkout-btn" href="checkout-billing.html" class="btn btn-primary">Proceed To Checkout</a>
+                        <a id="checkout-btn" href="checkout-billing.html" class="btn btn-primary">Proceed To
+                            Checkout</a>
                     </div>
                 </div>
             </div>
@@ -142,13 +133,21 @@
                 </div>
                 <div class="col-md-7">
                     <div class="form-group">
-                        <input class="form-control" placeholder="Enter your Email!" id="newsletter"
-                            name="newsletter" type="email">
+                        <input class="form-control" placeholder="Enter your Email!" id="newsletter" name="newsletter"
+                            type="email">
                         <input class="form-control btn btn-primary" value="Subscribe" type="submit">
                     </div>
                 </div>
             </div>
         </div>
-    </section>           
+    </section>
 </main>
+{% endblock %}
+
+{% block postloadjs %}
+
+<script type="text/javascript">
+
+
+</script>
 {% endblock %}
