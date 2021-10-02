@@ -53,12 +53,11 @@ def delete_cart_item(request, item_id):
     """Remove the item from the cart"""
 
     try:
-        gym_class = get_object_or_404(GymClass, pk=item_id)
-
         cart = request.session.get('cart', {})
+        name = request.POST['item_name']
 
         cart.pop(item_id)
-        messages.success(request, f'Removed {gym_class.name} from your cart')
+        messages.success(request, f'Removed {name} from your cart')
 
         request.session['cart'] = cart
         return HttpResponse(status=200)

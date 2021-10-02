@@ -59,7 +59,7 @@
                                         <tr>
                                             <td colspan="2" data-th="Product" data-label="Product">
                                                 <div class="signle-item-row">
-                                                    <a class="delete-item" data-item-id = "{{ item.item_id }}">✕</a>
+                                                    <a class="delete-item" data-item-id = "{{ item.item_id }}" data-item-name = "{{ item.gym_class.name }}">✕</a>
                                                     <div class="single-item">
                                                         <a href="#.">{{ item.gym_class.name }}</a>
                                                     </div>
@@ -189,8 +189,9 @@
     $('.delete-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).data('itemId');
+        var name = $(this).data('itemName');
         var url = `/cart/delete/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken};
+        var data = {'csrfmiddlewaretoken': csrfToken, 'item_name': name};
 
         $.post(url, data)
          .done(function() {
