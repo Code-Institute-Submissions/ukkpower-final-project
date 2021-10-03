@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'classes',
     'tinymce',
     'cart',
+    'checkout',
 ]
 
 SITE_ID = 1
