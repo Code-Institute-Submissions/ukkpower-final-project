@@ -92,7 +92,7 @@
                         <div class="col-12 d-flex justify-content-end">
                             <div class="button-group">
                                 <a href="{% url 'timetable' %}" class="btn btn-secondary">Add another class</a>
-                                <a href="checkout-billing.html" class="btn btn-primary {% if not cart_items %}disabled{% endif %}">Checkout</a>
+                                <a href="{% url 'checkout' %}" class="btn btn-primary {% if not cart_items %}disabled{% endif %}">Checkout</a>
                             </div>
                         </div>
                     </div>
