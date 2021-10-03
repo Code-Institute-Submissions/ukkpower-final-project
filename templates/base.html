@@ -52,7 +52,7 @@
             <a class="navbar-brand" href="{% url 'home' %}"><img class="img-fluid logo" src="svg/logo.svg" alt="Gymania">GYMAINIA</a>
             <div class="shop-nav order-sm-start order-lg-last">
                 <div class="shop-cart">
-                    <a href="{% url 'view_cart' %}"><i class="icon-bag icon"></i> <sup class="shop-count">2</sup></a>
+                    <a href="{% url 'view_cart' %}"><i class="icon-bag icon"></i> {% if product_count %}<sup class="shop-count">{{product_count}}</sup>{% endif %}</a>
                 </div>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
