@@ -66,7 +66,7 @@
                 <h3>Shipping Address</h3>
 
                 <div class="col-12">
-                    {{ order_form.phone_number | as_crispy_field }}
+                    {{ order_form.street_address1 | as_crispy_field }}
                 </div>
                 <div class="col-12">
                     {{ order_form.street_address2 | as_crispy_field }}
@@ -113,7 +113,7 @@
                         Cart</a>
                 </div>
                 <div class="col-6 d-flex justify-content-end">
-                    <button type="submit" class="btn btn-primary">Next Step</button>
+                    <button id="submit-button" type="submit" class="btn btn-primary">Next Step</button>
                 </div>
 
             </form>
@@ -155,12 +155,19 @@
             </div>
         </div>
     </section>
+    <div id="processing-overlay" style="display: none;">
+        <div class="d-flex justify-content-center">
+            <div class="spinner-grow text-primary" role="status" style="width: 3rem; height: 3rem; z-index: 20;">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+    </div>
 </main>
 {% endblock %}
 
 {% block postloadjs %}
-
-<script type="text/javascript">
-
-</script>
+{{ block.super }}
+{{ stripe_public_key|json_script:"id_stripe_public_key" }}
+{{ client_secret|json_script:"id_client_secret" }}
+<script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
