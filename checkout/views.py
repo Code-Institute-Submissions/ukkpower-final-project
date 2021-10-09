@@ -17,7 +17,7 @@ def cache_checkout_data(request):
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(pid, metadata={
-            'bag': json.dumps(request.session.get('bag', {})),
+            'cart': json.dumps(request.session.get('cart', {})),
             'save_info': request.POST.get('save_info'),
             'username': request.user,
         })
@@ -78,7 +78,7 @@ def checkout(request):
                                     args=[order.order_number]))        
     else:
         cart = request.session.get('cart', {})
-
+     
         if not cart:
             messages.error(request, "There's nothing in your bag at the moment")
             return redirect(reverse('timetable'))
@@ -88,7 +88,7 @@ def checkout(request):
         stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key
         intent = stripe.PaymentIntent.create(
-            amount=stripe_total,
+            amount=stripe_total+1,
             currency=settings.STRIPE_CURRENCY,
         )
 
