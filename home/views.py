@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from profiles.models import UserProfile
+from django.contrib.auth.models import User
 
 
 def index(request):
