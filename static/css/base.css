@@ -705,3 +705,7 @@ header {
 .footer-opening-times li span:last-child {
   float: right;
 }
+
+.footer-bottom {
+  padding: 20px 0px;
+}
