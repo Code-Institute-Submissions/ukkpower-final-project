@@ -47,7 +47,7 @@
                         {% endif %}
                         <div class="card-body">
                             <h5 class="card-title">{{ trainer.name }}</h5>
-                            <p class="card-text">{{ trainer.bio }}</p>
+                            <p class="card-text">{{ trainer.bio|safe|truncatechars:255 }}</p>
                         </div>
                     </div>
                 </a>

@@ -25,34 +25,22 @@
 
     <section class="page-title text-center">
         <div class="section-title-box">
-            <span class="section-sub-title">GOALS</span>
-            <h2 class="section-title">FIND THE CLASS THAT SUITS YOU</h2>
-            <p class="section-info">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                the readable content of a page when looking at its layout.
-            </p>
+            <span class="section-sub-title">TRAINER</span>
+            <h2 class="section-title">{{ trainer.name }}</h2>
         </div>
     </section>
 
     <section  class="mb-5">
         <div class="container">
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                
-                <div class="col">
-                    <a href="{% url 'trainer' trainer.id %}">
-                    <div class="card">
-                        {% if trainer.image %}
-                            <img class="card-img-top" src="{{ trainer.image.url }}" alt="{{ trainer.name }}">
-                        {% else %}
-                            <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ trainer.name }}">
-                        {% endif %}
-                        <div class="card-body">
-                            <h5 class="card-title">{{ trainer.name }}</h5>
-                            <p class="card-text">{{ trainer.bio }}</p>
-                        </div>
-                    </div>
-                </a>
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2 class="title">ABOUT ME</h2>
+                    {{ trainer.bio|safe }}
                 </div>
-                
+                <div class="col-sm-8 col-md-6 col-lg-4">
+                    <img class="img-fluid" src="{{ trainer.image.url }}" alt="{{ trainer.name }}">
+                </div>
+            </div> 
         </div>
     </section>
 

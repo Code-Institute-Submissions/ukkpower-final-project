@@ -371,6 +371,24 @@ header {
 }
 
 /*--------------------------------------------------------------
+## Trainer
+--------------------------------------------------------------*/
+.specialties li{
+  list-style: none;
+}
+
+.specialties li:before {
+  border: 1px solid #e5ba03;
+  border-radius: 50%;
+  content: "";
+  display: inline-block;
+  margin-right: 11px;
+  position: relative;
+  width: 14px;
+  height: 14px;
+}
+
+/*--------------------------------------------------------------
 ## Sidebar
 --------------------------------------------------------------*/
 .info-list {
