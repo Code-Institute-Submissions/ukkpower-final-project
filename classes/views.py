@@ -18,9 +18,13 @@ def gym_class(request, class_id):
     """ A view to show individual product details """
 
     gym_class = get_object_or_404(GymClass, pk=class_id)
+    trainers = gym_class.trainer.all()
+    timetables = Timetable.objects.select_related().filter(gym_class = class_id)
 
     context = {
         'gym_class': gym_class,
+        'trainers': trainers,
+        'timetables': timetables
     }
 
     return render(request, 'classes/class.html', context)

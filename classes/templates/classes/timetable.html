@@ -51,10 +51,10 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {% for entry in timetable_entries %}
                             <tr>
                                 <td>9:00 am</td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '9:00 am' and entry.day == 'Monday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -62,8 +62,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '9:00 am' and entry.day == 'Tuesday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -71,8 +73,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '9:00 am' and entry.day == 'Wednesday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -80,8 +84,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '9:00 am' and entry.day == 'Thursday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -89,8 +95,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '9:00 am' and entry.day == 'Friday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -98,8 +106,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '9:00 am' and entry.day == 'Saturday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -107,8 +117,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '9:00 am' and entry.day == 'Sunday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -116,11 +128,13 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                             </tr>
                             <tr>
                                 <td>10:00 am</td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '10:00 am' and entry.day == 'Monday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -128,8 +142,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '10:00 am' and entry.day == 'Tuesday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -137,8 +153,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '10:00 am' and entry.day == 'Wednesday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -146,8 +164,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '10:00 am' and entry.day == 'Thursday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -155,8 +175,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '10:00 am' and entry.day == 'Friday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -164,8 +186,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '10:00 am' and entry.day == 'Saturday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -173,8 +197,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '10:00 am' and entry.day == 'Sunday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -182,11 +208,13 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                             </tr>
                             <tr>
                                 <td>11:00 am</td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '11:00 am' and entry.day == 'Monday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -194,8 +222,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '11:00 am' and entry.day == 'Tuesday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -203,8 +233,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '11:00 am' and entry.day == 'Wednesday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -212,8 +244,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '11:00 am' and entry.day == 'Thursday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -221,8 +255,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '11:00 am' and entry.day == 'Friday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -230,8 +266,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '11:00 am' and entry.day == 'Saturday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -239,8 +277,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '11:00 am' and entry.day == 'Sunday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -248,11 +288,13 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                             </tr>
                             <tr>
                                 <td>12:00 pm</td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '12:00 pm' and entry.day == 'Monday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -260,8 +302,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '12:00 pm' and entry.day == 'Tuesday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -269,8 +313,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '12:00 pm' and entry.day == 'Wednesday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -278,8 +324,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '12:00 pm' and entry.day == 'Thursday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -287,8 +335,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '12:00 pm' and entry.day == 'Friday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -296,8 +346,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '12:00 pm' and entry.day == 'Saturday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -305,8 +357,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '12:00 pm' and entry.day == 'Sunday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -314,11 +368,13 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                             </tr>
                             <tr>
                                 <td>1:00 pm</td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '1:00 pm' and entry.day == 'Monday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -326,8 +382,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '1:00 pm' and entry.day == 'Tuesday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -335,8 +393,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '1:00 pm' and entry.day == 'Wednesday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -344,8 +404,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '1:00 pm' and entry.day == 'Thursday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -353,8 +415,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '1:00 pm' and entry.day == 'Friday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -362,8 +426,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '1:00 pm' and entry.day == 'Saturday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -371,8 +437,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '1:00 pm' and entry.day == 'Sunday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -380,11 +448,13 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                             </tr>
                             <tr>
                                 <td>2:00 pm</td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '2:00 pm' and entry.day == 'Monday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -392,8 +462,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '2:00 pm' and entry.day == 'Tuesday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -401,8 +473,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '2:00 pm' and entry.day == 'Wednesday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -410,8 +484,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '2:00 pm' and entry.day == 'Thursday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -419,8 +495,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '2:00 pm' and entry.day == 'Friday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -428,8 +506,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '2:00 pm' and entry.day == 'Saturday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -437,8 +517,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '2:00 pm' and entry.day == 'Sunday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -446,11 +528,13 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                             </tr>
                             <tr>
                                 <td>3:00 pm</td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '3:00 pm' and entry.day == 'Monday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -458,8 +542,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '3:00 pm' and entry.day == 'Tuesday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -467,8 +553,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '3:00 pm' and entry.day == 'Wednesday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -476,8 +564,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '3:00 pm' and entry.day == 'Thursday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -485,8 +575,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '3:00 pm' and entry.day == 'Friday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -494,8 +586,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '3:00 pm' and entry.day == 'Saturday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -503,8 +597,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '3:00 pm' and entry.day == 'Sunday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -512,11 +608,13 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                             </tr>
                             <tr>
                                 <td>4:00 pm</td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '4:00 pm' and entry.day == 'Monday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -524,8 +622,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '4:00 pm' and entry.day == 'Tuesday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -533,8 +633,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '4:00 pm' and entry.day == 'Wednesday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -542,8 +644,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '4:00 pm' and entry.day == 'Thursday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -551,8 +655,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '4:00 pm' and entry.day == 'Friday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -560,8 +666,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '4:00 pm' and entry.day == 'Saturday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -569,8 +677,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '4:00 pm' and entry.day == 'Sunday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -578,11 +688,13 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                             </tr>
                             <tr>
                                 <td>5:00 pm</td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '5:00 pm' and entry.day == 'Monday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -590,8 +702,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '5:00 pm' and entry.day == 'Tuesday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -599,8 +713,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '5:00 pm' and entry.day == 'Wednesday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -608,8 +724,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '5:00 pm' and entry.day == 'Thursday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -617,8 +735,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '5:00 pm' and entry.day == 'Friday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -626,8 +746,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '5:00 pm' and entry.day == 'Saturday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -635,8 +757,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '5:00 pm' and entry.day == 'Sunday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -644,11 +768,13 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                             </tr>
                             <tr>
                                 <td>6:00 pm</td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '6:00 pm' and entry.day == 'Monday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -656,8 +782,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '6:00 pm' and entry.day == 'Tuesday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -665,8 +793,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '6:00 pm' and entry.day == 'Wednesday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -674,8 +804,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '6:00 pm' and entry.day == 'Thursday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -683,8 +815,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '6:00 pm' and entry.day == 'Friday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -692,8 +826,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '6:00 pm' and entry.day == 'Saturday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -701,8 +837,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '6:00 pm' and entry.day == 'Sunday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -710,11 +848,13 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                             </tr>
                             <tr>
                                 <td>7:00 pm</td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '7:00 pm' and entry.day == 'Monday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -722,8 +862,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '7:00 pm' and entry.day == 'Tuesday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -731,8 +873,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '7:00 pm' and entry.day == 'Wednesday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -740,8 +884,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '7:00 pm' and entry.day == 'Thursday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -749,8 +895,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '7:00 pm' and entry.day == 'Friday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -758,8 +906,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '7:00 pm' and entry.day == 'Saturday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -767,8 +917,10 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td colspan="1" data-row_height="45" rowspan="1">
+                                    {% for entry in timetable_entries %}
                                     {% if entry.time_slot  == '7:00 pm' and entry.day == 'Sunday'%}
                                     <div class="navigation-inner-event-content">
                                         <a href="{% url 'gym_class' entry.gym_class.id %}"
@@ -776,9 +928,9 @@
                                         <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
                                     </div>
                                     {% endif %}
+                                    {% endfor %}
                                 </td>
                             </tr>
-                            {% endfor %}
                         </tbody>
                     </table>
 

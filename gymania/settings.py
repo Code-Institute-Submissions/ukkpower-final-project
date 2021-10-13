@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     'checkout',
     'crispy_forms',
     'crispy_bootstrap5',
-    'profiles'
+    'profiles',
+    'debug_toolbar',
 ]
 
 SITE_ID = 1
@@ -73,6 +74,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'gymania.urls'
@@ -191,7 +193,13 @@ else:
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
-    
+
+  
 TINYMCE_DEFAULT_CONFIG = {
     "plugins": "code",  
 }
+
+
+INTERNAL_IPS = [
+    '127.0.0.1',
+]
