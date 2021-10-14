@@ -9,11 +9,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <h1 class="banner-title">Class Name</h1>
+                    <h1 class="banner-title">{{ gym_class.name }}</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{% url 'home' %}">
-                                    <i class="icon-home icons"></i>Home</a></li>
+                                    <i class="icon-home icons"></i> Home</a></li>
                             <li class="breadcrumb-item text-white" aria-current="page">Class</li>
                         </ol>
                     </nav>
@@ -26,17 +26,16 @@
         <div class="section-title-box">
             <span class="section-sub-title">Class</span>
             <h2 class="section-title">{{ gym_class.name }}</h2>
-            <p class="section-info">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                the readable content of a page when looking at its layout.
+            <p class="section-info">See all the information and details for each of our classes
             </p>
         </div>
     </section>
-  
+
     {% if messages %}
     <div class="alert alert-success container" role="alert">
         <ul class="messages">
             {% for message in messages %}
-            <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
+            <li {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
             {% endfor %}
         </ul>
     </div>
@@ -80,18 +79,20 @@
                             {% for trainer in trainers %}
                             <div class="col">
                                 <a href="{% url 'trainer' trainer.id %}">
-                                <div class="card">
-                                    {% if trainer.image %}
-                                        <img class="card-img-top" src="{{ trainer.image.url }}" alt="{{ trainer.name }}">
-                                    {% else %}
-                                        <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ trainer.name }}">
-                                    {% endif %}
-                                    <div class="card-body">
-                                        <h5 class="card-title">{{ trainer.name }}</h5>
-                                        <p class="card-text">{{ trainer.bio|safe|truncatechars:255 }}</p>
+                                    <div class="card">
+                                        {% if trainer.image %}
+                                        <img class="card-img-top" src="{{ trainer.image.url }}"
+                                            alt="{{ trainer.name }}">
+                                        {% else %}
+                                        <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png"
+                                            alt="{{ trainer.name }}">
+                                        {% endif %}
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{ trainer.name }}</h5>
+                                            <p class="card-text">{{ trainer.bio|safe|truncatechars:255 }}</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
                             </div>
                             {% endfor %}
                         </div>
@@ -139,38 +140,18 @@
                                         <h5 class="title">Cost</h5><span>€{{ gym_class.price }}</span>
                                     </li>
                                 </ul>
-                                <form class="form" action="{% url 'add_to_cart' gym_class.id %}" method="POST">
+                                <form class="form book-class" action="{% url 'add_to_cart' gym_class.id %}"
+                                    method="POST">
                                     {% csrf_token %}
                                     <div class="form-row">
                                         <div class="col-12">
-                                            <p class="mt-3"><strong>Quantity:</strong></p>
+                                            <h3>Book Class</h3>
                                             <div class="form-group w-50">
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
-                                                        <button class="decrement-qty btn btn-black rounded-0" 
-                                                            data-item_id="{{ gym_class.id }}" id="decrement-qty_{{ gym_class.id }}">
-                                                            <span class="icon">
-                                                                <i class="fas fa-minus"></i>
-                                                            </span>
-                                                        </button>
-                                                    </div>
-                                                    <input class="form-control qty_input" type="number"
-                                                        name="quantity" value="1" min="1" max="99"
-                                                        data-item_id="{{ gym_class.id }}"
-                                                        id="id_qty_{{ gym_class.id }}">
-                                                    <div class="input-group-append">
-                                                        <button class="increment-qty btn btn-black rounded-0"
-                                                            data-item_id="{{ gym_class.id }}" id="increment-qty_{{ gym_class.id }}">
-                                                            <span class="icon">
-                                                                <i class="fas fa-plus"></i>
-                                                            </span>
-                                                        </button>
-                                                    </div>
-                                                </div>
+                                                <input class="form-control qty_input" type="number" name="quantity"
+                                                    value="1" min="1" max="99" data-item_id="{{ gym_class.id }}"
+                                                    id="id_qty_{{ gym_class.id }}">
+                                                <input type="submit" class="btn btn-primary mt-1" value="Add to Cart">
                                             </div>
-                                        </div>            
-                                        <div class="col-12">
-                                            <input type="submit" class="btn btn-primary" value="Add to Cart">
                                         </div>
                                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                     </div>
@@ -192,7 +173,7 @@
                         We Help You Stay Healty</h3>
                 </div>
                 <div class="col-md-6 text-end">
-                    <a href="contact-us.html" class="icon-btn"><i class="fas fa-arrow-circle-right"></i> See
+                    <a href="{% url 'membership' %}" class="icon-btn"><i class="fas fa-arrow-circle-right"></i> See
                         Membership</a>
                 </div>
             </div>
