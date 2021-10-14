@@ -19,3 +19,9 @@ def about(request):
     """ A view to return the about-us page """
 
     return render(request, 'home/about-us.html')
+
+
+def membership(request):
+    """ A view to return the membership page """
+
+    return render(request, 'home/membership.html')
