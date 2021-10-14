@@ -13,8 +13,8 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{% url 'home' %}">
-                                    <i class="icon-home icons"></i>Home</a></li>
-                            <li class="breadcrumb-item text-white" aria-current="page">About</li>
+                                    <i class="icon-home icons"></i> Home</a></li>
+                            <li class="breadcrumb-item text-white" aria-current="page"> About Us</li>
                         </ol>
                     </nav>
                 </div>
@@ -24,10 +24,10 @@
 
     <section class="page-title text-center">
         <div class="section-title-box">
-            <span class="section-sub-title">GOALS</span>
-            <h2 class="section-title">FIND THE CLASS THAT SUITS YOU</h2>
-            <p class="section-info">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                the readable content of a page when looking at its layout.
+            <span class="section-sub-title">GYMANIA</span>
+            <h2 class="section-title">OUR PHILOSOPHY AND MISSION </h2>
+            <p class="section-info">Gymania is a dedicated fitness and health centre that works with clients individual
+                needs.
             </p>
         </div>
     </section>
@@ -37,15 +37,15 @@
             <div class="row">
                 <div class="col-lg-7 order-1 order-lg-0">
                     <div class="thumb">
-                        <img src="https://template.hasthemes.com/zymzoo/zymzoo/assets/img/about/2.png" alt="Image">
+                        <img src="{% static "imgs/2.webp" %}" alt="About Us">
                     </div>
                 </div>
                 <div class="col-lg-5 order-0 order-lg-1">
                     <div class="about-content">
                         <div class="desc">
-                            <p>Gym is very important to maintain our health luptas sit fugit, sed quia cuuntur magni
-                                dolores eos qui rat ione volupta pleasure rationally encounter consequences that are
-                                extremely </p>
+                            <p>Gymania is the leading gym. We have the best and most expeirienced perfessional trainners
+                                in the area. We can help you reach any goal be it fitness or health. Contact us and drop
+                                in to discuss your needs.</p>
                         </div>
                         <div class="inner-content">
                             <div class="about-list">
@@ -58,7 +58,8 @@
                             </div>
                             <div class="signature-box">
                                 <figure>
-                                    <img width="257" height="69" src="{% static 'imgs/signature.png' %}" alt="" loading="lazy">
+                                    <img width="257" height="69" src="{% static 'imgs/signature.png' %}" alt=""
+                                        loading="lazy">
                                 </figure>
                                 <div class="elementor-image-box-content">
                                     <h4 class="elementor-image-box-title">Alex Jhon Martin</h4>
@@ -67,7 +68,7 @@
                             </div>
 
                             <div class="inline-style">
-                                <a class="btn btn-secondary" href="classes.html">LET’S START</a>
+                                <a class="btn btn-secondary" href="{% url 'membership' %}">LET’S START</a>
                             </div>
                         </div>
                     </div>
@@ -84,7 +85,7 @@
                         We Help You Stay Healty</h3>
                 </div>
                 <div class="col-md-6 text-end">
-                    <a href="contact-us.html" class="icon-btn"><i class="fas fa-arrow-circle-right"></i> See
+                    <a href="{% url 'membership' %}" class="icon-btn"><i class="fas fa-arrow-circle-right"></i> See
                         Membership</a>
                 </div>
             </div>
@@ -101,13 +102,13 @@
                 </div>
                 <div class="col-md-7">
                     <div class="form-group">
-                        <input class="form-control" placeholder="Enter your Email!" id="newsletter"
-                            name="newsletter" type="email">
+                        <input class="form-control" placeholder="Enter your Email!" id="newsletter" name="newsletter"
+                            type="email">
                         <input class="form-control btn btn-primary" value="Subscribe" type="submit">
                     </div>
                 </div>
             </div>
         </div>
-    </section>    
+    </section>
 </main>
 {% endblock %}

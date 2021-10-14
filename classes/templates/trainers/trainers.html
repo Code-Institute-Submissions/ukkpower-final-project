@@ -4,8 +4,7 @@
 {% block content %}
 <main>
     <section class="page-banner">
-        <div class="bg-overlay"
-            style="background-image: url('{% static "imgs/classes-bg.jpg" %}');">
+        <div class="bg-overlay" style="background-image: url('{% static "imgs/classes-bg.jpg" %}');">
         </div>
         <div class="container">
             <div class="row">
@@ -33,26 +32,27 @@
         </div>
     </section>
 
-    <section  class="mb-5">
+    <section class="mb-5">
         <div class="container">
             <div class="row row-cols-1 row-cols-md-2 g-4">
                 {% for trainer in trainers %}
                 <div class="col">
                     <a href="{% url 'trainer' trainer.id %}">
-                    <div class="card">
-                        {% if trainer.image %}
+                        <div class="card">
+                            {% if trainer.image %}
                             <img class="card-img-top" src="{{ trainer.image.url }}" alt="{{ trainer.name }}">
-                        {% else %}
+                            {% else %}
                             <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ trainer.name }}">
-                        {% endif %}
-                        <div class="card-body">
-                            <h5 class="card-title">{{ trainer.name }}</h5>
-                            <p class="card-text">{{ trainer.bio|safe|truncatechars:255 }}</p>
+                            {% endif %}
+                            <div class="card-body">
+                                <h5 class="card-title">{{ trainer.name }}</h5>
+                                <p class="card-text">{{ trainer.bio|safe|truncatechars:255 }}</p>
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
                 </div>
                 {% endfor %}
+            </div>
         </div>
     </section>
 
@@ -64,7 +64,7 @@
                         We Help You Stay Healty</h3>
                 </div>
                 <div class="col-md-6 text-end">
-                    <a href="contact-us.html" class="icon-btn"><i class="fas fa-arrow-circle-right"></i> See
+                    <a href="{% url 'membership' %}" class="icon-btn"><i class="fas fa-arrow-circle-right"></i> See
                         Membership</a>
                 </div>
             </div>
@@ -81,8 +81,8 @@
                 </div>
                 <div class="col-md-7">
                     <div class="form-group">
-                        <input class="form-control" placeholder="Enter your Email!" id="newsletter"
-                            name="newsletter" type="email">
+                        <input class="form-control" placeholder="Enter your Email!" id="newsletter" name="newsletter"
+                            type="email">
                         <input class="form-control btn btn-primary" value="Subscribe" type="submit">
                     </div>
                 </div>
