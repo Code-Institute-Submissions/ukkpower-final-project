@@ -10,10 +10,10 @@ from checkout.models import Order
 @login_required
 def profile(request):
     """ Display the user's profile. """
-    profile = get_object_or_404(UserProfile, user=request.user)
+    my_profile = get_object_or_404(UserProfile, user=request.user)
 
     if request.method == 'POST':
-        form = UserProfileForm(request.POST, instance=profile)
+        form = UserProfileForm(request.POST, instance=my_profile)
         if form.is_valid():
             form.save()
             messages.success(request, 'Profile updated successfully')
@@ -22,8 +22,8 @@ def profile(request):
                            ('Update failed. Please ensure '
                             'the form is valid.'))
     else:
-        form = UserProfileForm(instance=profile)
-    orders = profile.orders.all()
+        form = UserProfileForm(instance=my_profile)
+    orders = my_profile.orders.all()
 
     template = 'profiles/profile.html'
     context = {

@@ -87,6 +87,23 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'contact-us' %}">Contact Us</a>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            My Account
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                    <li><a href="{% url 'home' %}" class="dropdown-item">Product Management</a></li>
+                                {% endif %}                          
+                                <li></li><a href="{% url 'profile' %}" class="dropdown-item">My Profile</a></li>
+                                <li></li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
+                            {% else %}
+                                <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
+                                <li></li><a href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
+                            {% endif %}                            
+                        </ul>
+                    </li>                    
                 </ul>
             </div>
         </div>

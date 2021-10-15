@@ -4,17 +4,17 @@
 {% block content %}
 <main>
     <section class="page-banner">
-        <div class="bg-overlay" style="background-image: url('imgs/membership-bg.jpg');">
+        <div class="bg-overlay" style="background-image: url('{% static "imgs/membership-bg.jpg" %}');">
         </div>
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <h1 class="banner-title">About Us</h1>
+                    <h1 class="banner-title">{{profile}}</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">
+                            <li class="breadcrumb-item"><a href="{% url 'home' %}">
                                     <i class="icon-home icons"></i>Home</a></li>
-                            <li class="breadcrumb-item text-white" aria-current="page">About</li>
+                            <li class="breadcrumb-item text-white" aria-current="page">Profile</li>
                         </ol>
                     </nav>
                 </div>
@@ -32,7 +32,80 @@
         </div>
     </section>
 
-    <section>Profile</section>
+    {% if messages %}
+    <div class="alert alert-success container" role="alert">
+        <ul class="messages">
+            {% for message in messages %}
+            <li {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    <section class="profile">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <h2>Default Delivery Information</h2>
+                    <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <button class="btn btn-primary mb-4">Update Address</button>
+                        <h2>Class History</h2>
+
+                    </form>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <h2>Account Details</h2>
+                    <div class="order-history table-responsive">
+                        <table class="table table-sm table-borderless">
+                            <tbody>
+                                <tr>
+                                    <td>Name:</td>
+                                    <td>{{request.user.first_name}} {{request.user.last_name}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Email:</td>
+                                    <td>{{request.user.email}}</td>
+                                </tr>                            
+                            </tbody>
+                        </table>
+                    </div>                  
+                </div> 
+                <div class="col-12">
+                    <div class="order-history table-responsive">
+                        <table class="table table-sm table-borderless">
+                            <thead>
+                                <tr>
+                                    <th>Order Number</th>
+                                    <th>Date</th>
+                                    <th>Items</th>
+                                    <th>Order Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for order in orders %}
+                                {% for item in order.lineitems.all %}
+                                    <tr>
+                                        <td>
+                                            <a href="{% url 'gym_class' item.gym_class_id%}"
+                                            title="{{ order.order_number }}">
+                                                {{ item.gym_class.name }}
+                                            </a>
+                                        </td>
+                                        <td>{{ order.date }}</td>
+                                        <td>{{ item.quantity }}</td>
+                                        <td>€{{ order.order_total }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>                    
+                </div>              
+            </div>
+        </div>
+    </section>    
 
     <section class="membership-call">
         <div class="container">
