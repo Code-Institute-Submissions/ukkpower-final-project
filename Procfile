@@ -1,0 +1,1 @@
+web: gunicorn gymania.wsgi:application

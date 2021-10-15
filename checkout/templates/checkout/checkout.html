@@ -33,23 +33,6 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="customer-options">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="well">
-                                    <p>Have a coupon?&nbsp;<a href="#."> Click here to enter your code </a></p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="well">
-                                    <p>Returning customer?&nbsp;<a href="#."> Click here to login </a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <form action="{% url 'checkout' %}" method="POST" id="payment-form" class="checkout-form row g-4">
                 {% csrf_token %}
@@ -129,7 +112,7 @@
                         We Help You Stay Healty</h3>
                 </div>
                 <div class="col-md-6 text-end">
-                    <a href="contact-us.html" class="icon-btn"><i class="fas fa-arrow-circle-right"></i> See
+                    <a href="{% url 'membership' %}" class="icon-btn"><i class="fas fa-arrow-circle-right"></i> See
                         Membership</a>
                 </div>
             </div>
@@ -154,11 +137,9 @@
             </div>
         </div>
     </section>
-    <div id="processing-overlay" style="display: none;">
-        <div class="d-flex justify-content-center">
-            <div class="spinner-grow text-primary" role="status" style="width: 3rem; height: 3rem; z-index: 20;">
-                <span class="sr-only">Loading...</span>
-            </div>
+    <div id="processing-overlay">
+        <div class="overlay__inner">
+            <div class="overlay__content"><span class="spinner"></span></div>
         </div>
     </div>
 </main>

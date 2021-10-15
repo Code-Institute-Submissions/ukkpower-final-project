@@ -94,7 +94,7 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
-                                    <li><a href="{% url 'home' %}" class="dropdown-item">Product Management</a></li>
+                                    <li><a href="{% url 'admin' %}" class="dropdown-item">Admin Panel</a></li>
                                 {% endif %}                          
                                 <li></li><a href="{% url 'profile' %}" class="dropdown-item">My Profile</a></li>
                                 <li></li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
