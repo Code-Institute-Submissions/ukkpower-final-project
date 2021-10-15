@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-1=-5cjctsd^(u=c22w08n(s#4)s58%u44+*673pt_*6zk&8$po
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['gymania-live.herokuapp.com/', 'localhost']
 
 
 # Application definition
