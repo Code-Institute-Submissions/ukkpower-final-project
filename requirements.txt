@@ -1,4 +1,4 @@
-sgiref==3.4.1
+asgiref==3.4.1
 crispy-bootstrap5==0.6
 dj-database-url==0.5.0
 Django==3.2.7
