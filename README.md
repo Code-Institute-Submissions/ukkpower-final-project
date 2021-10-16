@@ -109,41 +109,48 @@ First Time Visitor
 
 FlashPoll.io uses two collections, Users and Polls
 
-Users Schema:
-```js
-{
-  "_id": ObjectId(),
-  "firstName": string,
-  "lastName": string,
-  "email": string,
-  "username": string,
-  "password": string
-}
+Profile Schema:
+```
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    default_phone_number = models.CharField(max_length=20,
+                                            null=True, blank=True)
+    default_street_address1 = models.CharField(max_length=80,
+                                               null=True, blank=True)
+    default_street_address2 = models.CharField(max_length=80,
+                                               null=True, blank=True)
+    default_town_or_city = models.CharField(max_length=40,
+                                            null=True, blank=True)
+    default_county = models.CharField(max_length=80,
+                                      null=True, blank=True)
+    default_postcode = models.CharField(max_length=20,
+                                        null=True, blank=True)
 ```
 
-Polls Schema:
-```js
-{
-  "_id": ObjectId(),
-  "question": string,
-  "total_votes": int,
-  "pollQuestions": {},               // will have many, see pollQuestions schema
-  "public": bool,
-  "user_id": string,
-  "created": timestamp,
-  "username": string,
-  "endDate": timestamp
-}
+Class Schema:
+```
+    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    name = models.CharField(max_length=254)
+    description = HTMLField()
+    short = models.TextField(blank=True)
+    level = models.CharField(max_length=254)
+    duration = models.IntegerField()
+    period = models.CharField(max_length=254)
+    students = models.IntegerField()
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+    trainer = models.ManyToManyField('Trainer', blank=True)
+    image_url = models.URLField(max_length=1024, null=True, blank=True)
+    image = models.ImageField(null=True, blank=True)
 
 ```
 
-pollQuestions Schema:
-```js
-
-key: {
-  "option": string,
-  "votes": int
-}
+Timetable Schema:
+```
+    gym_class = models.ForeignKey('GymClass', on_delete=models.CASCADE)
+    start_date = models.DateField()
+    end_date = models.DateField()
+    day = models.CharField(max_length=12)
+    time_slot = models.CharField(max_length=12)
+    trainer = models.ForeignKey('Trainer', on_delete=models.CASCADE)
 
 ```
 
