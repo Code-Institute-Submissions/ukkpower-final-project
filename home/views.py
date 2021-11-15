@@ -30,7 +30,7 @@ def contact(request):
                 send_mail(subject, message, 'ukkpower@gmail.com', ['ukkpower@gmail.com']) 
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
-            return redirect(reverse('contact_us'))
+            return redirect(reverse('contact'))
       
     form = ContactForm() 
 
