@@ -1,4 +1,3 @@
-from django.conf import settings
 from django.shortcuts import get_object_or_404
 from classes.models import GymClass
 
@@ -9,6 +8,7 @@ def cart_contents(request):
     total = 0
     product_count = 0
     item_total = 0
+    quantity = 0
 
     cart = request.session.get('cart', {})
 
