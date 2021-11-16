@@ -1,14 +1,14 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, get_object_or_404
 from .models import GymClass, Trainer, Timetable
 
 
 def gym_classes(request):
     """ A view to return the index page """
 
-    gym_classes = GymClass.objects.all()
+    gym_classes_data = GymClass.objects.all()
 
     context = {
-        'gym_classes': gym_classes,
+        'gym_classes': gym_classes_data,
     }
 
     return render(request, 'classes/classes.html', context)
@@ -17,19 +17,19 @@ def gym_classes(request):
 def gym_class(request, class_id):
     """ A view to show individual product details """
 
-    gym_class = get_object_or_404(GymClass, pk=class_id)
-    trainers = gym_class.trainer.all()
-    timetables = Timetable.objects.select_related().filter(gym_class = class_id)
+    gym_class_data = get_object_or_404(GymClass, pk=class_id)
+    trainers_data = gym_class_data.trainer.all()
+    timetables = Timetable.objects.select_related().filter(gym_class=class_id)
 
     context = {
-        'gym_class': gym_class,
-        'trainers': trainers,
+        'gym_class': gym_class_data,
+        'trainers': trainers_data,
         'timetables': timetables
     }
 
     return render(request, 'classes/class.html', context)
 
-    
+
 def timetable(request):
     """ A view to return the index page """
 
@@ -45,10 +45,10 @@ def timetable(request):
 def trainers(request):
     """ A view to return the index page """
 
-    trainers = Trainer.objects.all()
+    trainers_data = Trainer.objects.all()
 
     context = {
-        'trainers': trainers,
+        'trainers': trainers_data,
     }
 
     return render(request, 'trainers/trainers.html', context)
@@ -57,10 +57,10 @@ def trainers(request):
 def trainer(request, trainer_id):
     """ A view to show individual product details """
 
-    trainer = get_object_or_404(Trainer, pk=trainer_id)
+    trainer_data = get_object_or_404(Trainer, pk=trainer_id)
 
     context = {
-        'trainer': trainer,
+        'trainer': trainer_data,
     }
 
     return render(request, 'trainers/trainer.html', context)
