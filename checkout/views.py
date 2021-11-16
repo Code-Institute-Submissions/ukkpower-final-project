@@ -1,17 +1,21 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+import json
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404, HttpResponse
+)
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
-from .forms import OrderForm
-from .models import Order, OrderLineItem
+
+import stripe
 
 from classes.models import GymClass
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 from cart.contexts import cart_contents
 
-import stripe
-import json
+from .forms import OrderForm
+from .models import Order, OrderLineItem
+
 
 @require_POST
 def cache_checkout_data(request):
@@ -77,14 +81,16 @@ def checkout(request):
             # Save the info to the user's profile if all is well
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success',
-                                    args=[order.order_number]))        
+                                    args=[order.order_number]))
     else:
         cart = request.session.get('cart', {})
-     
+
         if not cart:
-            messages.error(request, "There's nothing in your bag at the moment")
+            messages.error(
+                request, "There's nothing in your bag at the moment"
+            )
             return redirect(reverse('timetable'))
-        
+
         current_cart = cart_contents(request)
         total = current_cart['total']
         stripe_total = round(total * 100)
@@ -153,7 +159,7 @@ def checkout_success(request, order_number):
             }
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
-                user_profile_form.save()    
+                user_profile_form.save()
 
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
