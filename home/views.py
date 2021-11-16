@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from profiles.models import UserProfile
 from django.contrib.auth.models import User
 from django.core.mail import send_mail, BadHeaderError
@@ -30,7 +30,7 @@ def contact(request):
                 send_mail(subject, message, 'ukkpower@gmail.com', ['ukkpower@gmail.com']) 
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
-            return redirect(reverse('contact'))
+            return redirect(reverse('contact-us'))
       
     form = ContactForm() 
 
