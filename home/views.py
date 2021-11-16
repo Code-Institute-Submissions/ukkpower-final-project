@@ -1,9 +1,7 @@
 from django.shortcuts import render, redirect, reverse
-from profiles.models import UserProfile
-from django.contrib.auth.models import User
 from django.core.mail import send_mail, BadHeaderError
-from .forms import ContactForm
 from django.http import HttpResponse
+from .forms import ContactForm
 
 
 def index(request):
@@ -20,19 +18,19 @@ def contact(request):
         if form.is_valid():
             subject = "Website Inquiry"
             body = {
-            'name': form.cleaned_data['name'], 
-            'email': form.cleaned_data['email'], 
-            'message':form.cleaned_data['message'], 
+                'name': form.cleaned_data['name'],
+                'email': form.cleaned_data['email'],
+                'message': form.cleaned_data['message'],
             }
             message = "\n".join(body.values())
 
             try:
-                send_mail(subject, message, 'ukkpower@gmail.com', ['ukkpower@gmail.com']) 
+                send_mail(subject, message, 'ukkpower@gmail.com',
+                          ['ukkpower@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect(reverse('contact-us'))
-      
-    form = ContactForm() 
+    form = ContactForm()
 
     return render(request, 'home/contact-us.html', {'form': form})
 
