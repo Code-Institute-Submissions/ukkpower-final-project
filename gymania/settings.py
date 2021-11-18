@@ -124,8 +124,7 @@ WSGI_APPLICATION = 'gymania.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.parse(
-        "postgres://uskiqgmbdtnxbh:908617221ca7212034d72a5770e7da518426a038487c749083ec1cadb5b80cc7@ec2-34-247-151-118.eu-west-1.compute.amazonaws.com:5432/dahbe7np52kuim")
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
 
 
