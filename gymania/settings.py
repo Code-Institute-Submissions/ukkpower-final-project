@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'tinymce',
     'cart',
     'checkout',
-    'coupons'
+    'coupons',
     'crispy_forms',
     'crispy_bootstrap5',
     'profiles',
