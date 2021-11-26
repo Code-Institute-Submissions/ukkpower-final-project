@@ -1,1 +1,1 @@
-Boutique Ado Confirmation for Order Number {{ order.order_number }}
+Gymania Confirmation for class {{ order.order_number }}
