@@ -1,5 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import GymClass, Trainer, Timetable
+from django.contrib.auth.decorators import login_required
+from .forms import ClassForm
 
 
 def gym_classes(request):
@@ -64,3 +66,30 @@ def trainer(request, trainer_id):
     }
 
     return render(request, 'trainers/trainer.html', context)
+
+
+@login_required
+def add_class(request):
+    """ Add a class to the website """
+    if not request.user.is_superuser:
+        messages.error(request, 'Restricted area')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = ClassForm(request.POST, request.FILES)
+        if form.is_valid():
+            gym_class = form.save()
+            messages.success(request, 'Successfully added class!')
+            return redirect(reverse('home'))
+        else:
+            messages.error(request, 'Failed to add class. Please ensure the form is valid.')
+    else:
+        form = ClassForm()
+        
+    template = 'classes/add_class.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+

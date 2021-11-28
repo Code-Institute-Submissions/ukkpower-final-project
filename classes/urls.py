@@ -7,4 +7,5 @@ urlpatterns = [
     path('timetable', views.timetable, name='timetable'),
     path('trainers', views.trainers, name='trainers'),
     path('trainer/<int:trainer_id>/', views.trainer, name='trainer'),
+    path('add/', views.add_class, name='add_class'),
 ]
