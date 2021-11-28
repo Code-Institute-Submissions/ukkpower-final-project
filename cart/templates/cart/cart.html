@@ -93,12 +93,26 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-6">Add discount code:</div>
+                        <div class="col-6">
+                            <form class="add-discount" method="POST" action="{% url 'add_discount' %}">
+                                {% csrf_token %}
+                                <input type="text" id="coupon_code" name="coupon_code" value="">
+                                <button type="submit" class="btn btn-primary">Submit Code</button>
+                            </form>
+                        </div>
+                    </div>
                     <div class="cart-total">
-                        <h4>CartTotals</h4>
+                        <h4>Cart Totals</h4>
                         <ul>
                             <li>
                                 <span class="label">Sub Total:</span>
-                                <span class="price">€{{ total }}</span>
+                                <span class="price">€{{ sub_total }}</span>
+                            </li>
+                            <li>
+                                <span class="label">Discount:</span>
+                                <span class="price">{{ discount }}%</span>
                             </li>
                             <li>
                                 <span class="label">Total:</span>

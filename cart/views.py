@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect, reverse, HttpResponse, \
 from django.contrib import messages
 
 from classes.models import GymClass
+from coupons.models import Coupon
 
 
 def view_cart(request):
@@ -69,3 +70,23 @@ def delete_cart_item(request, item_id):
     except Exception as e:
         messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)
+
+
+def add_discount(request):
+    # If coupon submitted, check if exists, active and valid period
+    if request.POST['coupon_code']:
+        coupon = Coupon.objects.filter(code=request.POST['coupon_code']).first()
+        if not coupon:
+            messages.error(request, f'No such coupon found')
+        else:
+            if coupon.active:
+                cart = request.session.get('cart', {})
+                cart['discount'] = coupon.discount
+                request.session['cart'] = cart
+                messages.success(request, f'Coupon added')
+            else:
+               messages.error(request, f'Coupon no longer active') 
+    else:
+        messages.error(request, f'No coupon submitted')
+    
+    return redirect(reverse('view_cart'))
