@@ -107,4 +107,16 @@ def view_classes(request):
         'gym_classes': gym_classes_data,
     }
 
-    return render(request, 'classes/vi.html', context)
+    return render(request, 'classes/view_class.html', context)
+
+@login_required
+def delete_product(request, class_id):
+    """ Delete a product from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Restricted area')
+        return redirect(reverse('view_class'))
+
+    gym_class = get_object_or_404(GymClass, pk=class_id)
+    gym_class.delete()
+    messages.success(request, 'Class deleted!')
+    return redirect(reverse('view_class'))
