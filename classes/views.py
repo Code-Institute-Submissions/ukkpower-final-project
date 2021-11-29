@@ -93,3 +93,18 @@ def add_class(request):
 
     return render(request, template, context)
 
+
+@login_required
+def view_classes(request):
+    """ View classes """
+    if not request.user.is_superuser:
+        messages.error(request, 'Restricted area')
+        return redirect(reverse('home'))
+
+    gym_classes_data = GymClass.objects.all()
+
+    context = {
+        'gym_classes': gym_classes_data,
+    }
+
+    return render(request, 'classes/vi.html', context)
