@@ -110,13 +110,41 @@ def view_classes(request):
     return render(request, 'classes/view_class.html', context)
 
 @login_required
+def edit_class(request, class_id):
+    """ Edit a product in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Restricted area')
+        return redirect(reverse('home'))
+
+    gym_classes_data = get_object_or_404(GymClass, pk=class_id)
+    if request.method == 'POST':
+        form = ClassForm(request.POST, request.FILES, instance=gym_classes_data)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated class!')
+            return redirect(reverse('class_view'))
+        else:
+            messages.error(request, 'Failed to update class. Please ensure the form is valid.')
+    else:
+        form = ClassForm(instance=gym_classes_data)
+        messages.info(request, f'You are editing {gym_classes_data.name}')
+
+    template = 'products/edit_class.html'
+    context = {
+        'form': form,
+        'gym_class': gym_classes_data,
+    }
+
+    return render(request, template, context)
+
+@login_required
 def delete_product(request, class_id):
     """ Delete a product from the store """
     if not request.user.is_superuser:
         messages.error(request, 'Restricted area')
-        return redirect(reverse('view_class'))
+        return redirect(reverse('home'))
 
-    gym_class = get_object_or_404(GymClass, pk=class_id)
-    gym_class.delete()
+    gym_classes_data = get_object_or_404(GymClass, pk=class_id)
+    gym_classes_data.delete()
     messages.success(request, 'Class deleted!')
     return redirect(reverse('view_class'))
