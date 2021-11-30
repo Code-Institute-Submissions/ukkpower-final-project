@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from .models import GymClass, Trainer, Timetable
 from django.contrib.auth.decorators import login_required
-from .forms import ClassForm
+from .forms import ClassForm, TrainerForm
 from django.contrib import messages
 
 
@@ -112,7 +112,7 @@ def view_classes(request):
 
 @login_required
 def edit_class(request, class_id):
-    """ Edit a product in the store """
+    """ Edit a class in the admin """
     if not request.user.is_superuser:
         messages.error(request, 'Restricted area')
         return redirect(reverse('home'))
@@ -139,7 +139,7 @@ def edit_class(request, class_id):
 
 @login_required
 def delete_class(request, class_id):
-    """ Delete a product from the store """
+    """ Delete a class from the admin """
     if not request.user.is_superuser:
         messages.error(request, 'Restricted area')
         return redirect(reverse('home'))
@@ -148,3 +148,84 @@ def delete_class(request, class_id):
     gym_classes_data.delete()
     messages.success(request, 'Class deleted!')
     return redirect(reverse('view_class'))
+
+
+@login_required
+def add_trainer(request):
+    """ Add a class to the website """
+    if not request.user.is_superuser:
+        messages.error(request, 'Restricted area')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = TrainerForm(request.POST, request.FILES)
+        if form.is_valid():
+            trainer_data = form.save()
+            messages.success(request, 'Successfully added trainer!')
+            return redirect(reverse('view_trainers'))
+        else:
+            messages.error(request, 'Failed to add trainer. Please ensure the form is valid.')
+    else:
+        form = TrainerForm()
+        
+    template = 'trainers/add_trainer.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def view_trainers(request):
+    """ View trainers """
+    if not request.user.is_superuser:
+        messages.error(request, 'Restricted area')
+        return redirect(reverse('home'))
+
+    trainers_data = Trainer.objects.all()
+
+    context = {
+        'trainers': trainers_data,
+    }
+
+    return render(request, 'trainers/view_trainers.html', context)
+
+@login_required
+def edit_trainer(request, trainer_id):
+    """ Edit a trainer in the admin """
+    if not request.user.is_superuser:
+        messages.error(request, 'Restricted area')
+        return redirect(reverse('home'))
+
+    trainer_data = get_object_or_404(Trainer, pk=trainer_id)
+    if request.method == 'POST':
+        form = TrainerForm(request.POST, request.FILES, instance=trainer_data)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated trainer!')
+            return redirect(reverse('view_trainers'))
+        else:
+            messages.error(request, 'Failed to update trainer. Please ensure the form is valid.')
+    else:
+        form = TrainerForm(instance=trainer_data)
+
+    template = 'trainers/edit_trainer.html'
+    context = {
+        'form': form,
+        'trainer': trainer_data,
+    }
+
+    return render(request, template, context)
+
+@login_required
+def delete_trainer(request, trainer_id):
+    """ Delete a product from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Restricted area')
+        return redirect(reverse('home'))
+
+    trainer_data = get_object_or_404(Trainer, pk=trainer_id)
+    trainer_data.delete()
+    messages.success(request, 'Trainer deleted!')
+    return redirect(reverse('view_trainers'))
