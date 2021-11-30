@@ -1,7 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from .models import GymClass, Trainer, Timetable
 from django.contrib.auth.decorators import login_required
 from .forms import ClassForm
+from django.contrib import messages
 
 
 def gym_classes(request):
@@ -80,7 +81,7 @@ def add_class(request):
         if form.is_valid():
             gym_class = form.save()
             messages.success(request, 'Successfully added class!')
-            return redirect(reverse('home'))
+            return redirect(reverse('view_class'))
         else:
             messages.error(request, 'Failed to add class. Please ensure the form is valid.')
     else:
@@ -122,14 +123,13 @@ def edit_class(request, class_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated class!')
-            return redirect(reverse('class_view'))
+            return redirect(reverse('view_class'))
         else:
             messages.error(request, 'Failed to update class. Please ensure the form is valid.')
     else:
         form = ClassForm(instance=gym_classes_data)
-        messages.info(request, f'You are editing {gym_classes_data.name}')
 
-    template = 'products/edit_class.html'
+    template = 'classes/edit_class.html'
     context = {
         'form': form,
         'gym_class': gym_classes_data,
@@ -138,7 +138,7 @@ def edit_class(request, class_id):
     return render(request, template, context)
 
 @login_required
-def delete_product(request, class_id):
+def delete_class(request, class_id):
     """ Delete a product from the store """
     if not request.user.is_superuser:
         messages.error(request, 'Restricted area')
