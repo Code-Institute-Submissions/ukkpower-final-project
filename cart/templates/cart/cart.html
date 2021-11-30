@@ -33,13 +33,7 @@
         <div class="container small-container">
             <div class="row">
                 <div class="col-md-12">
-                    {% if messages %}
-                    <ul class="alert alert-success list-unstyled" role="alert">
-                        {% for message in messages %}
-                        <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
+                    {% include 'includes/messages.html' %}
                     <div class="responsive-table">
                         <table class="cart-table">
                             <thead>
