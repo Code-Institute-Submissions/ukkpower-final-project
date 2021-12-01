@@ -19,8 +19,8 @@ urlpatterns = [
          name='delete_trainer'),
     path('timetable/view/', views.view_timetables, name='view_timetables'),
     path('timetable/add/', views.add_timetable, name='add_timetable'),
-    path('timetable/edit/<int:timetable>/', views.edit_timetable,
+    path('timetable/edit/<int:timetable_id>/', views.edit_timetable,
          name='edit_timetable'),
-    path('timetable/delete/<int:timetable>/', views.delete_timetable,
+    path('timetable/delete/<int:timetable_id>/', views.delete_timetable,
          name='delete_timetable'),
 ]
