@@ -32,8 +32,9 @@
                     <thead>
                         <tr>
                             <th scope="col">id</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Category</th>
+                            <th scope="col">Class</th>
+                            <th scope="col">Day</th>
+                            <th scope="col">Time</th>
                             <th scope="col">Options</th>
                         </tr>
                     </thead>
@@ -41,8 +42,9 @@
                         {% for timetable in timetables%}
                         <tr>
                             <td>{{ timetable.id }}</td>
-                            <td>{{ gym_class.name }}</td>
-                            <td>{{ gym_class.category }}</td>
+                            <td>{{ timetable.gym_class.name }}</td>
+                            <td>{{ timetable.day}}</td>
+                            <td>{{ timetable.time_slot}}</td>
                             <td><a href="{% url 'edit_timetable' timetable.id %}">Edit</a> <a href="{% url 'delete_timetable' timetable.id %}">Delete</a></td>
                         </tr>
                         {% endfor %}
