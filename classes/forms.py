@@ -1,6 +1,7 @@
 from django import forms
 from .models import GymClass, Category, Trainer, Timetable
 
+
 class ClassForm(forms.ModelForm):
 
     class Meta:

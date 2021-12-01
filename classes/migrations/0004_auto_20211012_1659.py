@@ -18,6 +18,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='gymclass',
             name='image_url',
-            field=models.URLField(blank=True, max_length=1024, null=True),
+            field=models.URLField(blank=True, max_length=1024),
         ),
     ]

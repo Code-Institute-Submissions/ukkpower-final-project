@@ -75,18 +75,19 @@ def delete_cart_item(request, item_id):
 def add_discount(request):
     # If coupon submitted, check if exists, active and valid period
     if request.POST['coupon_code']:
-        coupon = Coupon.objects.filter(code=request.POST['coupon_code']).first()
+        coupon = Coupon.objects.filter(
+            code=request.POST['coupon_code']).first()
         if not coupon:
-            messages.error(request, f'No such coupon found')
+            messages.error(request, 'No such coupon found')
         else:
             if coupon.active:
                 cart = request.session.get('cart', {})
                 cart['discount'] = coupon.discount
                 request.session['cart'] = cart
-                messages.success(request, f'Coupon added')
+                messages.success(request, 'Coupon added')
             else:
-               messages.error(request, f'Coupon no longer active') 
+                messages.error(request, 'Coupon no longer active')
     else:
-        messages.error(request, f'No coupon submitted')
-    
+        messages.error(request, 'No coupon submitted')
+
     return redirect(reverse('view_cart'))

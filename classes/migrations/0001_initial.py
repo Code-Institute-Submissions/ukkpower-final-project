@@ -15,9 +15,12 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Category',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(
+                    auto_created=True, primary_key=True, serialize=False,
+                    verbose_name='ID')),
                 ('name', models.CharField(max_length=254)),
-                ('friendly_name', models.CharField(blank=True, max_length=254, null=True)),
+                ('friendly_name', models.CharField(
+                    blank=True, max_length=254)),
             ],
             options={
                 'verbose_name_plural': 'Categories',
@@ -26,15 +29,21 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='GymClass',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(
+                    auto_created=True, primary_key=True, serialize=False,
+                    verbose_name='ID')),
                 ('name', models.CharField(max_length=254)),
                 ('description', models.TextField()),
                 ('level', models.CharField(max_length=254)),
-                ('duration', models.DecimalField(blank=True, decimal_places=2, max_digits=6, null=True)),
+                ('duration', models.DecimalField(
+                    blank=True, decimal_places=2, max_digits=6)),
                 ('period', models.CharField(max_length=254)),
                 ('students', models.IntegerField()),
                 ('price', models.DecimalField(decimal_places=2, max_digits=6)),
-                ('category', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='classes.category')),
+                ('category', models.ForeignKey(
+                    blank=True, null=True,
+                    on_delete=django.db.models.deletion.SET_NULL,
+                    to='classes.category')),
             ],
             options={
                 'verbose_name_plural': 'GymClasses',
@@ -43,23 +52,32 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Trainer',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(
+                    auto_created=True, primary_key=True,
+                    serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=254)),
                 ('bio', models.TextField()),
-                ('image_url', models.URLField(blank=True, max_length=1024, null=True)),
-                ('image', models.ImageField(blank=True, null=True, upload_to='')),
+                ('image_url', models.URLField(blank=True, max_length=1024)),
+                ('image', models.ImageField(
+                    blank=True, null=True, upload_to='')),
             ],
         ),
         migrations.CreateModel(
             name='Timetable',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(
+                    auto_created=True, primary_key=True,
+                    serialize=False, verbose_name='ID')),
                 ('start_date', models.DateField()),
                 ('end_date', models.DateField()),
                 ('date', models.CharField(max_length=12)),
                 ('time_slot', models.CharField(max_length=12)),
-                ('gym_class', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='classes.gymclass')),
-                ('trainer', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='classes.trainer')),
+                ('gym_class', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE,
+                    to='classes.gymclass')),
+                ('trainer', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE,
+                    to='classes.trainer')),
             ],
         ),
         migrations.AddField(

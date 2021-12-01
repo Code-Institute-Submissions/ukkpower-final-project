@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from .forms import CouponForm
 from django.contrib import messages
 
+
 @login_required
 def add_coupon(request):
     """ Add a coupon to the website """
@@ -18,10 +19,13 @@ def add_coupon(request):
             messages.success(request, 'Successfully added coupon!')
             return redirect(reverse('view_coupons'))
         else:
-            messages.error(request, 'Failed to add coupon. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to add coupon. Please ensure the form is valid.'
+                )
     else:
         form = CouponForm()
-        
+
     template = 'add_coupon.html'
     context = {
         'form': form,
@@ -45,6 +49,7 @@ def view_coupons(request):
 
     return render(request, 'view_coupons.html', context)
 
+
 @login_required
 def edit_coupon(request, coupon_id):
     """ Edit a coupon in the admin """
@@ -60,7 +65,10 @@ def edit_coupon(request, coupon_id):
             messages.success(request, 'Successfully updated coupon!')
             return redirect(reverse('view_coupons'))
         else:
-            messages.error(request, 'Failed to update coupon. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to update coupon. Please ensure the form is valid.'
+                )
     else:
         form = CouponForm(instance=coupon_data)
 
@@ -72,6 +80,7 @@ def edit_coupon(request, coupon_id):
 
     return render(request, template, context)
 
+
 @login_required
 def delete_coupon(request, coupon_id):
     """ Delete a coupon from the admin """
@@ -79,7 +88,7 @@ def delete_coupon(request, coupon_id):
         messages.error(request, 'Restricted area')
         return redirect(reverse('home'))
 
-    coupon_data = get_object_or_404(Coupon, pk=trainer_id)
+    coupon_data = get_object_or_404(Coupon, pk=coupon_id)
     coupon_data.delete()
     messages.success(request, 'Coupon deleted!')
     return redirect(reverse('view_coupons'))
