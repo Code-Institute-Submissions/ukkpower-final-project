@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        {% include 'includes/admin-sidebar.html' %}
+
+        <main class="col-md-9 ms-sm-auto col-lg-10">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10 col-xl-8">
+                        <div
+                            class="admin-header d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+
+                            <h1>Edit Coupon</h1>
+                            <div class="btn-toolbar mb-2 mb-md-0">
+                                <a href="{% url 'add_coupon' %}" class="btn btn-sm btn-outline-secondary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-plus-circle" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="12" y1="8" x2="12" y2="16"></line>
+                                        <line x1="8" y1="12" x2="16" y2="12"></line>
+                                    </svg>
+                                    Add New Coupon
+                                </a>
+                            </div>
+                        </div>
+
+                        <form method="POST" action="{% url 'edit_coupon' coupon.id %}" class="form mb-2">
+                            {% csrf_token %}
+                            {{ form | crispy }}
+                            <hr class="mt-5 mb-5">
+                            <button class="btn w-100 btn-primary" type="submit">Edit Coupon</button>
+                            <a href="{% url 'view_coupons' %}" class="btn w-100 btn-link text-muted mt-2">
+                                Cancel editing coupon
+                              </a>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.datetimeinput').datepicker();
+    });
+</script>
+{% endblock %}
