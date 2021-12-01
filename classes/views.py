@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from .models import GymClass, Trainer, Timetable
 from django.contrib.auth.decorators import login_required
-from .forms import ClassForm, TrainerForm
+from .forms import ClassForm, TrainerForm, TimetableForm
 from django.contrib import messages
 
 
@@ -152,7 +152,7 @@ def delete_class(request, class_id):
 
 @login_required
 def add_trainer(request):
-    """ Add a class to the website """
+    """ Add a trainer to the website """
     if not request.user.is_superuser:
         messages.error(request, 'Restricted area')
         return redirect(reverse('home'))
@@ -229,3 +229,85 @@ def delete_trainer(request, trainer_id):
     trainer_data.delete()
     messages.success(request, 'Trainer deleted!')
     return redirect(reverse('view_trainers'))
+
+
+@login_required
+def add_timetable(request):
+    """ Add a timetable to the website """
+    if not request.user.is_superuser:
+        messages.error(request, 'Restricted area')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = TimetableForm(request.POST, request.FILES)
+        if form.is_valid():
+            timetable_data = form.save()
+            messages.success(request, 'Successfully added timetable!')
+            return redirect(reverse('view_timetables'))
+        else:
+            messages.error(request, 'Failed to add timetable. Please ensure the form is valid.')
+    else:
+        form = TimetableForm()
+        
+    template = 'timetables/add_timetable.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def view_timetables(request):
+    """ View trainers """
+    if not request.user.is_superuser:
+        messages.error(request, 'Restricted area')
+        return redirect(reverse('home'))
+
+    timetables_data = Timetable.objects.all()
+
+    context = {
+        'timetables': timetables_data,
+    }
+
+    return render(request, 'timetables/view_timetables.html', context)
+
+
+@login_required
+def edit_timetable(request, trainer_id):
+    """ Edit a timetable in the admin """
+    if not request.user.is_superuser:
+        messages.error(request, 'Restricted area')
+        return redirect(reverse('home'))
+
+    timetable_data = get_object_or_404(Trainer, pk=timetable_id)
+    if request.method == 'POST':
+        form = TimetableForm(request.POST, request.FILES, instance=timetable_data)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated timetable!')
+            return redirect(reverse('view_timetables'))
+        else:
+            messages.error(request, 'Failed to update timetable. Please ensure the form is valid.')
+    else:
+        form = TimetableForm(instance=timetable_data)
+
+    template = 'timetables/edit_timetable.html'
+    context = {
+        'form': form,
+        'timetable': timetable_data,
+    }
+
+    return render(request, template, context)
+
+@login_required
+def delete_timetable(request, trainer_id):
+    """ Delete a timetable from the admin """
+    if not request.user.is_superuser:
+        messages.error(request, 'Restricted area')
+        return redirect(reverse('home'))
+
+    timetable_data = get_object_or_404(Timetable, pk=timetable_id)
+    timetable_data.delete()
+    messages.success(request, 'Timetable deleted!')
+    return redirect(reverse('view_timetables'))

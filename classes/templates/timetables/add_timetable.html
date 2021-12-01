@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        {% include 'includes/admin-sidebar.html' %}
+
+        <main class="col-md-9 ms-sm-auto col-lg-10">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10 col-xl-8">
+                        <div class="admin-header d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <h1>Add A New Timetable Entry</h1>
+                    </div>
+
+                        <form method="POST" action="{% url 'add_class' %}" class="form mb-2"
+                            enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{ form | crispy }}
+                            <hr class="mt-5 mb-5">
+                            <button class="btn w-100 btn-primary" type="submit">Add Entry</button>
+                            <a href="{% url 'view_timetables' %}" class="btn w-100 btn-link text-muted mt-2">
+                                Cancel adding timetable entry
+                              </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+{% endblock %}

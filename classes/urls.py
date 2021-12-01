@@ -15,4 +15,8 @@ urlpatterns = [
     path('trainer/add/', views.add_trainer, name='add_trainer'),
     path('trainer/edit/<int:trainer_id>/', views.edit_trainer, name='edit_trainer'),
     path('trainer/delete/<int:trainer_id>/', views.delete_trainer, name='delete_trainer'),
+    path('timetable/view/', views.view_timetables, name='view_timetables'),
+    path('timetable/add/', views.add_timetable, name='add_timetable'),
+    path('timetable/edit/<int:timetable>/', views.edit_timetable, name='edit_timetable'),
+    path('timetable/delete/<int:timetable>/', views.delete_timetable, name='delete_timetable'),    
 ]
