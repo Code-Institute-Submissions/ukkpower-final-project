@@ -298,7 +298,7 @@ def edit_timetable(request, timetable_id):
         messages.error(request, 'Restricted area')
         return redirect(reverse('home'))
 
-    timetable_data = get_object_or_404(Trainer, pk=timetable_id)
+    timetable_data = get_object_or_404(Timetable, pk=timetable_id)
     if request.method == 'POST':
         form = TimetableForm(request.POST, request.FILES,
                              instance=timetable_data)
