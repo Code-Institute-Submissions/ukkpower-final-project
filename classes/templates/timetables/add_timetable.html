@@ -15,7 +15,7 @@
                         <h1>Add A New Timetable Entry</h1>
                     </div>
 
-                        <form method="POST" action="{% url 'add_class' %}" class="form mb-2"
+                        <form method="POST" action="{% url 'add_timetable' %}" class="form mb-2"
                             enctype="multipart/form-data">
                             {% csrf_token %}
                             {{ form | crispy }}
