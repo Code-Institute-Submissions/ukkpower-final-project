@@ -1,3 +1,8 @@
 from django.test import TestCase
+from django.urls import reverse
 
-# Create your tests here.
+
+class URLTests (TestCase):
+    def test_cart(self):
+        response = self.client.get(reverse('view_cart'))
+        self.assertEqual(response.status_code, 200)

@@ -15,7 +15,7 @@ def add_coupon(request):
     if request.method == 'POST':
         form = CouponForm(request.POST, request.FILES)
         if form.is_valid():
-            coupon_data = form.save()
+            form.save()
             messages.success(request, 'Successfully added coupon!')
             return redirect(reverse('view_coupons'))
         else:
