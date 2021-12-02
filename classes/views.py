@@ -79,7 +79,7 @@ def add_class(request):
     if request.method == 'POST':
         form = ClassForm(request.POST, request.FILES)
         if form.is_valid():
-            gym_class = form.save()
+            form.save()
             messages.success(request, 'Successfully added class!')
             return redirect(reverse('view_class'))
         else:
@@ -169,7 +169,7 @@ def add_trainer(request):
     if request.method == 'POST':
         form = TrainerForm(request.POST, request.FILES)
         if form.is_valid():
-            trainer_data = form.save()
+            form.save()
             messages.success(request, 'Successfully added trainer!')
             return redirect(reverse('view_trainers'))
         else:
@@ -257,7 +257,7 @@ def add_timetable(request):
     if request.method == 'POST':
         form = TimetableForm(request.POST, request.FILES)
         if form.is_valid():
-            timetable_data = form.save()
+            form.save()
             messages.success(request, 'Successfully added timetable!')
             return redirect(reverse('view_timetables'))
         else:
