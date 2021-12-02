@@ -38,7 +38,11 @@
                     {{ trainer.bio|safe }}
                 </div>
                 <div class="col-sm-8 col-md-6 col-lg-4">
+                    {% if trainer.image %}
                     <img class="img-fluid" src="{{ trainer.image.url }}" alt="{{ trainer.name }}">
+                    {% else %}
+                    <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ trainer.name }}">
+                    {% endif %}                    
                 </div>
             </div> 
         </div>
