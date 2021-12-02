@@ -903,7 +903,7 @@ header {
 ## Allauth
 --------------------------------------------------------------*/
 @media (min-width: 576px) {
-  .allauth-body {
+  .auth-body {
     padding: 3rem;
   }
 }
