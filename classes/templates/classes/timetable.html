@@ -36,904 +36,981 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-
-                    <table class="navigation-shortcode-table  navigation-theme-mode" data-hide_empty_row="1">
-                        <thead>
-                            <tr class="navigation-shortcode-row">
-                                <th data-index="0"></th>
-                                <th data-index="1">Monday</th>
-                                <th data-index="2">Tuesday</th>
-                                <th data-index="3">Wednesday</th>
-                                <th data-index="4">Thursday</th>
-                                <th data-index="5">Friday</th>
-                                <th data-index="6">Saturday</th>
-                                <th data-index="7">Sunday</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>9:00 am</td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '9:00 am' and entry.day == 'Monday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '9:00 am' and entry.day == 'Tuesday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '9:00 am' and entry.day == 'Wednesday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '9:00 am' and entry.day == 'Thursday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '9:00 am' and entry.day == 'Friday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '9:00 am' and entry.day == 'Saturday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '9:00 am' and entry.day == 'Sunday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>10:00 am</td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '10:00 am' and entry.day == 'Monday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '10:00 am' and entry.day == 'Tuesday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '10:00 am' and entry.day == 'Wednesday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '10:00 am' and entry.day == 'Thursday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '10:00 am' and entry.day == 'Friday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '10:00 am' and entry.day == 'Saturday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '10:00 am' and entry.day == 'Sunday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>11:00 am</td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '11:00 am' and entry.day == 'Monday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '11:00 am' and entry.day == 'Tuesday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '11:00 am' and entry.day == 'Wednesday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '11:00 am' and entry.day == 'Thursday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '11:00 am' and entry.day == 'Friday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '11:00 am' and entry.day == 'Saturday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '11:00 am' and entry.day == 'Sunday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>12:00 pm</td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '12:00 pm' and entry.day == 'Monday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '12:00 pm' and entry.day == 'Tuesday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '12:00 pm' and entry.day == 'Wednesday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '12:00 pm' and entry.day == 'Thursday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '12:00 pm' and entry.day == 'Friday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '12:00 pm' and entry.day == 'Saturday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '12:00 pm' and entry.day == 'Sunday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1:00 pm</td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '1:00 pm' and entry.day == 'Monday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '1:00 pm' and entry.day == 'Tuesday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '1:00 pm' and entry.day == 'Wednesday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '1:00 pm' and entry.day == 'Thursday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '1:00 pm' and entry.day == 'Friday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '1:00 pm' and entry.day == 'Saturday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '1:00 pm' and entry.day == 'Sunday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2:00 pm</td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '2:00 pm' and entry.day == 'Monday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '2:00 pm' and entry.day == 'Tuesday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '2:00 pm' and entry.day == 'Wednesday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '2:00 pm' and entry.day == 'Thursday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '2:00 pm' and entry.day == 'Friday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '2:00 pm' and entry.day == 'Saturday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '2:00 pm' and entry.day == 'Sunday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3:00 pm</td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '3:00 pm' and entry.day == 'Monday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '3:00 pm' and entry.day == 'Tuesday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '3:00 pm' and entry.day == 'Wednesday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '3:00 pm' and entry.day == 'Thursday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '3:00 pm' and entry.day == 'Friday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '3:00 pm' and entry.day == 'Saturday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '3:00 pm' and entry.day == 'Sunday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>4:00 pm</td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '4:00 pm' and entry.day == 'Monday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '4:00 pm' and entry.day == 'Tuesday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '4:00 pm' and entry.day == 'Wednesday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '4:00 pm' and entry.day == 'Thursday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '4:00 pm' and entry.day == 'Friday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '4:00 pm' and entry.day == 'Saturday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '4:00 pm' and entry.day == 'Sunday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>5:00 pm</td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '5:00 pm' and entry.day == 'Monday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '5:00 pm' and entry.day == 'Tuesday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '5:00 pm' and entry.day == 'Wednesday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '5:00 pm' and entry.day == 'Thursday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '5:00 pm' and entry.day == 'Friday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '5:00 pm' and entry.day == 'Saturday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '5:00 pm' and entry.day == 'Sunday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>6:00 pm</td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '6:00 pm' and entry.day == 'Monday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '6:00 pm' and entry.day == 'Tuesday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '6:00 pm' and entry.day == 'Wednesday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '6:00 pm' and entry.day == 'Thursday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '6:00 pm' and entry.day == 'Friday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '6:00 pm' and entry.day == 'Saturday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '6:00 pm' and entry.day == 'Sunday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>7:00 pm</td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '7:00 pm' and entry.day == 'Monday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '7:00 pm' and entry.day == 'Tuesday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '7:00 pm' and entry.day == 'Wednesday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '7:00 pm' and entry.day == 'Thursday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '7:00 pm' and entry.day == 'Friday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '7:00 pm' and entry.day == 'Saturday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                                <td colspan="1" data-row_height="45" rowspan="1">
-                                    {% for entry in timetable_entries %}
-                                    {% if entry.time_slot  == '7:00 pm' and entry.day == 'Sunday'%}
-                                    <div class="navigation-inner-event-content">
-                                        <a href="{% url 'gym_class' entry.gym_class.id %}"
-                                            class="event-title">{{ entry.gym_class.name }}</a>
-                                        <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins</p>
-                                    </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-
+                    <div class="table-responsive">
+                        <table class="navigation-shortcode-table  navigation-theme-mode" data-hide_empty_row="1">
+                            <thead>
+                                <tr class="navigation-shortcode-row">
+                                    <th data-index="0"></th>
+                                    <th data-index="1">Monday</th>
+                                    <th data-index="2">Tuesday</th>
+                                    <th data-index="3">Wednesday</th>
+                                    <th data-index="4">Thursday</th>
+                                    <th data-index="5">Friday</th>
+                                    <th data-index="6">Saturday</th>
+                                    <th data-index="7">Sunday</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>9:00 am</td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '9:00 am' and entry.day == 'Monday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '9:00 am' and entry.day == 'Tuesday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '9:00 am' and entry.day == 'Wednesday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '9:00 am' and entry.day == 'Thursday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '9:00 am' and entry.day == 'Friday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '9:00 am' and entry.day == 'Saturday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '9:00 am' and entry.day == 'Sunday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>10:00 am</td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '10:00 am' and entry.day == 'Monday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '10:00 am' and entry.day == 'Tuesday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '10:00 am' and entry.day == 'Wednesday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '10:00 am' and entry.day == 'Thursday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '10:00 am' and entry.day == 'Friday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '10:00 am' and entry.day == 'Saturday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '10:00 am' and entry.day == 'Sunday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>11:00 am</td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '11:00 am' and entry.day == 'Monday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '11:00 am' and entry.day == 'Tuesday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '11:00 am' and entry.day == 'Wednesday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '11:00 am' and entry.day == 'Thursday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '11:00 am' and entry.day == 'Friday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '11:00 am' and entry.day == 'Saturday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '11:00 am' and entry.day == 'Sunday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>12:00 pm</td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '12:00 pm' and entry.day == 'Monday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '12:00 pm' and entry.day == 'Tuesday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '12:00 pm' and entry.day == 'Wednesday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '12:00 pm' and entry.day == 'Thursday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '12:00 pm' and entry.day == 'Friday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '12:00 pm' and entry.day == 'Saturday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '12:00 pm' and entry.day == 'Sunday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1:00 pm</td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '1:00 pm' and entry.day == 'Monday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '1:00 pm' and entry.day == 'Tuesday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '1:00 pm' and entry.day == 'Wednesday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '1:00 pm' and entry.day == 'Thursday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '1:00 pm' and entry.day == 'Friday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '1:00 pm' and entry.day == 'Saturday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '1:00 pm' and entry.day == 'Sunday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2:00 pm</td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '2:00 pm' and entry.day == 'Monday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '2:00 pm' and entry.day == 'Tuesday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '2:00 pm' and entry.day == 'Wednesday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '2:00 pm' and entry.day == 'Thursday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '2:00 pm' and entry.day == 'Friday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '2:00 pm' and entry.day == 'Saturday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '2:00 pm' and entry.day == 'Sunday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3:00 pm</td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '3:00 pm' and entry.day == 'Monday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '3:00 pm' and entry.day == 'Tuesday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '3:00 pm' and entry.day == 'Wednesday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '3:00 pm' and entry.day == 'Thursday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '3:00 pm' and entry.day == 'Friday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '3:00 pm' and entry.day == 'Saturday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '3:00 pm' and entry.day == 'Sunday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4:00 pm</td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '4:00 pm' and entry.day == 'Monday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '4:00 pm' and entry.day == 'Tuesday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '4:00 pm' and entry.day == 'Wednesday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '4:00 pm' and entry.day == 'Thursday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '4:00 pm' and entry.day == 'Friday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '4:00 pm' and entry.day == 'Saturday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '4:00 pm' and entry.day == 'Sunday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5:00 pm</td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '5:00 pm' and entry.day == 'Monday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '5:00 pm' and entry.day == 'Tuesday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '5:00 pm' and entry.day == 'Wednesday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '5:00 pm' and entry.day == 'Thursday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '5:00 pm' and entry.day == 'Friday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '5:00 pm' and entry.day == 'Saturday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '5:00 pm' and entry.day == 'Sunday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6:00 pm</td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '6:00 pm' and entry.day == 'Monday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '6:00 pm' and entry.day == 'Tuesday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '6:00 pm' and entry.day == 'Wednesday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '6:00 pm' and entry.day == 'Thursday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '6:00 pm' and entry.day == 'Friday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '6:00 pm' and entry.day == 'Saturday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '6:00 pm' and entry.day == 'Sunday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7:00 pm</td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '7:00 pm' and entry.day == 'Monday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '7:00 pm' and entry.day == 'Tuesday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '7:00 pm' and entry.day == 'Wednesday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '7:00 pm' and entry.day == 'Thursday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '7:00 pm' and entry.day == 'Friday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '7:00 pm' and entry.day == 'Saturday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td colspan="1" data-row_height="45" rowspan="1">
+                                        {% for entry in timetable_entries %}
+                                        {% if entry.time_slot  == '7:00 pm' and entry.day == 'Sunday'%}
+                                        <div class="navigation-inner-event-content">
+                                            <a href="{% url 'gym_class' entry.gym_class.id %}"
+                                                class="event-title">{{ entry.gym_class.name }}</a>
+                                            <p class="event-subtitle pt-text-dark">{{ entry.gym_class.duration }} mins
+                                            </p>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

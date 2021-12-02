@@ -92,13 +92,19 @@ table tbody td {
   color: #eeeeee;
   font-family: var(--title-fonts);
   font-weight: 800;
-  font-size: 8em;
+  font-size: 6em;
   position: absolute;
   top: -40px;
   left: 0;
   right: 0;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
+}
+
+@media (min-width: 576px) {
+  .section-sub-title {
+    font-size: 8em;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -183,6 +189,7 @@ header {
   background-color: #1b1f23;
   color: #fff;
   text-transform: uppercase;
+  padding: 4rem 0;
 }
 
 .inspirational .text-primary {
@@ -798,7 +805,7 @@ header {
 .clearfix:after {
     clear: both;
 }
-body {
+.error-bg {
     background: #f0f0f0 !important;
 }
 .page-404 .outer {
@@ -890,4 +897,13 @@ body {
     text-align: center;
 
     color: #999999;
+}
+
+/*--------------------------------------------------------------
+## Allauth
+--------------------------------------------------------------*/
+@media (min-width: 576px) {
+  .allauth-body {
+    padding: 3rem;
+  }
 }
