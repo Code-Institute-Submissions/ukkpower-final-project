@@ -57,11 +57,11 @@ The app was designed be clean and the main goal of converting new customers stan
 1. [Photoshop:](https://www.adobe.com/ie/products/photoshop.html)
     - Photoshop was used to create the logo, resizing images and editing photos for the website.
 1. [Django:](https://django.com/)
-    - Python Flask was used as the Framework
+    - Python Django was used as the Framework
 1. [AWS:](https://aws.amazon.com)
-    - Used for testing routes
+    - Used for storing static and media files
 1. [Heroku:](https://heroku.com/)
-    - MongoDB was used as the database and Pymongo was used as the Python interface
+    - Is used to run the live app with Postgres as the database
 1. [Bootstrap:](https://getbootstrap.com/)
     - Bootstrap was used and the html foundation
 
@@ -71,6 +71,8 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 -   [W3C Markup Validator](https://validator.w3.org/) - [Results](https://github.com/)
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
+-   The Flake8 module was run to ensure that all code was Pep8 compliant.
+-   UnitTest was implemented to test the apps main URLS. More tests will be implemented in the furture to test the apps Models
 
 The website has been tested on multiple device to ensure it is fully responsive.
 
@@ -107,7 +109,7 @@ First Time Visitor
 
 ## Database schema
 
-FlashPoll.io uses two collections, Users and Polls
+<h2 align="center"><img src="docs/database.png"></h2>
 
 Profile Schema:
 ```
@@ -156,17 +158,10 @@ Timetable Schema:
 
 ## Deployment
 
-### GitHub Pages
+### Heroku
 
-The project was deployed to GitHub Pages using the following steps...
-
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-    - Alternatively Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
-3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
-4. Under "Source", click the dropdown called "None" and select "Master Branch".
-5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now published site [link](https://github.com) in the "GitHub Pages" section.
+- The project was deployed to Heroku which is used to run the app and host the Postgres database
+- AWS S3 was used to store the static and media files
 
 ### Forking the GitHub Repository
 
