@@ -24,10 +24,10 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', include('home.urls')),
     path('gym-classes/', include('classes.urls')),
-    path('tinymce/', include('tinymce.urls')),
+    path('tinymce/', include('tinymce.urls')), # Necessary for the django-tinymce as per docs
     path('cart/', include('cart.urls')),
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
     path('coupon/', include('coupons.urls')),
-    path('__debug__/', include(debug_toolbar.urls)),
+    path('__debug__/', include(debug_toolbar.urls)), # Necessary for the django-debug-toolbar as per docs
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
